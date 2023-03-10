@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+        scroll-behavior: smooth;
+        scroll-padding-top: 2rem;
+        font-family: "Inter";
+    }
+
+    html {
+        background-color: var(--primary-bg-color);
+    }
+}
+
+:root {
+    --primary-bg-color: #F9F8FF;
+    --secondary-bg-color: #ffffff;
+    --primary-color: #1659E9;
+    --secondary-color: #0d358c;
+    --tertiary-color: #464555;
+    --primary-select-item: #F6F8FA;
+    --primary-selected-item: #EAEFF2;
+}
+
+.dark {
+    --primary-bg-color: #333333;
+    --secondary-bg-color: #121212;
+    --primary-color: #35A6F8;
+    --secondary-color: #0668af;
+    --tertiary-color: #E3E3E3;
+    --primary-select-item: #444444;
+    --primary-selected-item: #3C4856;
+}
