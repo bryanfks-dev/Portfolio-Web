@@ -1,0 +1,132 @@
+/* This is body design configuration */
+.body{
+    position: relative;
+    background-color: var(--background);
+}
+
+/* This is preloading design configuration */
+#preload {
+    z-index: 99;
+    background-color: var(--background);
+}
+
+#outline-base {
+    stroke-dasharray: calc(242.776657104492px * 0.01), 242.776657104492px;
+    stroke-dashoffset: 0;
+    stroke: var(--background-nav);
+    animation: anim 1.2s linear infinite;
+}
+
+#outline-thick {
+    stroke-dasharray: calc(242.776657104492px * 0.01), 242.776657104492px;
+    stroke-dashoffset: 0;
+    stroke: var(--thick-preload);
+    animation: anim 1.5s linear infinite;
+}
+
+#outline-red {
+    stroke-dasharray: calc(242.776657104492px * 0.01), 242.776657104492px;
+    stroke-dashoffset: 0;
+    animation: anim 2.7s linear infinite;
+}
+
+@keyframes anim {
+    12.5% {
+        stroke-dasharray: calc(242.776657104492px * 0.14), 242.776657104492px;
+        stroke-dashoffset: calc(-242.776657104492px * 0.11);
+    }
+    43.75% {
+        stroke-dasharray: calc(242.776657104492px * 0.35), 242.776657104492px;
+        stroke-dashoffset: calc(-242.776657104492px * 0.35);
+    }
+    100% {
+        stroke-dasharray: calc(242.776657104492px * 0.01), 242.776657104492px;
+        stroke-dashoffset: calc(-242.776657104492px * 0.99);
+    }
+}
+
+/* This is navigation bar design configuration */
+nav {
+    z-index: 98;
+}
+
+/* This is section design configuration*/
+.wrapper {
+    padding-left: 10%;
+}
+
+
+/* This is h1 design configuration "Hello!" */
+h1 {
+    display: inline-block;
+    border-left: .8rem solid var(--background-h1);
+    position: relative;
+    padding-right: 1rem;
+    white-space: nowrap;
+}
+
+h1::before {
+    position: absolute;
+    content: attr(data-text);
+    color: var(--primary-color);
+    padding-right: 1rem;
+    background-color: var(--background-h1);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: var(--block-animation);
+}
+
+/* This is line design configuration "--------" */
+#line {
+    display: block;
+    background-color: var(--color-line);
+    height: .5rem;
+    width: calc(.8rem + .7rem + 4.5rem * 3);
+}
+
+/* This is desc design configuration "I'm Bryan ..." */
+#desc-container {
+    background-color: rgba(255, 255, 255, .8);
+    font-weight: 500;
+    padding-left: 1rem;
+}
+
+#desc-in {
+    color: var(--background-h1);
+}
+
+/* This is image configauration */
+img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+/* This is media query */
+@media (max-width: 240px) {
+    img {
+        opacity: 0;
+    }
+}
+
+/* This is md in Tailwind CSS */
+@media (max-width: 768px) {
+    section {
+        position: relative;
+        top: 30%;
+        transform: translateY(-30%);
+    }
+
+    img {
+        top: 70%;
+        transform: translate(-20%, -70%);
+    }
+}
+
+/* This is lg in Tailwind CSs */
+@media (min-width: 1024px) {
+    #line {
+        width: calc(.8rem + .7rem + 6rem * 3.5);
+    }
+}

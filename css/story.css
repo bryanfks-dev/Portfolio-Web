@@ -1,0 +1,51 @@
+/* This is body design configuration */
+.body{
+    position: relative;
+    background-color: var(--background);
+}
+
+/* This is preloading design configuration */
+#preload {
+    z-index: 99;
+    background-color: var(--background);
+}
+
+#outline-base {
+    stroke-dasharray: calc(242.776657104492px * 0.01), 242.776657104492px;
+    stroke-dashoffset: 0;
+    stroke: var(--background-nav);
+    animation: anim 1.2s linear infinite;
+}
+
+#outline-thick {
+    stroke-dasharray: calc(242.776657104492px * 0.01), 242.776657104492px;
+    stroke-dashoffset: 0;
+    stroke: var(--thick-preload);
+    animation: anim 1.5s linear infinite;
+}
+
+#outline-red {
+    stroke-dasharray: calc(242.776657104492px * 0.01), 242.776657104492px;
+    stroke-dashoffset: 0;
+    animation: anim 2.7s linear infinite;
+}
+
+@keyframes anim {
+    12.5% {
+        stroke-dasharray: calc(242.776657104492px * 0.14), 242.776657104492px;
+        stroke-dashoffset: calc(-242.776657104492px * 0.11);
+    }
+    43.75% {
+        stroke-dasharray: calc(242.776657104492px * 0.35), 242.776657104492px;
+        stroke-dashoffset: calc(-242.776657104492px * 0.35);
+    }
+    100% {
+        stroke-dasharray: calc(242.776657104492px * 0.01), 242.776657104492px;
+        stroke-dashoffset: calc(-242.776657104492px * 0.99);
+    }
+}
+
+/* This is navigation bar design configuration */
+nav {
+    z-index: 98;
+}
