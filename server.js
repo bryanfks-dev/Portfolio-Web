@@ -9,8 +9,10 @@ const fs = require('fs');
 app.use(express.static(path.join(__dirname + '/dist')));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+const path = require('path');
+
 /* Service(s) */
-const sendd_mail = require("./services/sendmail.js");
+const send_mail = require("./services/sendmail.js");
 
 const PORT = process.env.PORT || 5000;
 
@@ -23,7 +25,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
     const [name, email, message] = [req.body.name, req.body.email, req.body.message];
 
-    sendmail.send_mail(name, email, message);
+    send_mail.send_mail(name, email, message);
 
     res.redirect('/#mail');
 });
