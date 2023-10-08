@@ -16,12 +16,16 @@
             "dest": "server.js"
         },
         {
-            "src": "/",
-            "dest": "dist/src/home.html"
+            "src": "/dist/src/(.*)",
+            "dest": "server.js"
         },
         {
-            "src": "/(.+)",
-            "dest": "dist/$1"
+            "src": "/dist/partials/(.*)",
+            "dest": "server.js"
+        },
+        {
+            "src": "/dist/docs/(.*)",
+            "dest": "server.js"
         }
     ]
 }
