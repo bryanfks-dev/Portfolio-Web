@@ -30,6 +30,10 @@
         {
             "src": "/resume",
             "dest": "dist/docs/"
+        },
+        {
+            "src": "/(.+)",
+            "dest": "public/$1"
         }
     ]
 }
