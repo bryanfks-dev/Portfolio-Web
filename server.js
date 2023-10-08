@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 /* Service(s) */
 const sendd_mail = require("./services/sendmail.js");
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.port || 5000;
 
 // Server route(s)
 // Index route
