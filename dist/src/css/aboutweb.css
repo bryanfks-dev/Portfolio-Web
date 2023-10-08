@@ -1,0 +1,108 @@
+section {
+    padding: 3% 12% 9% 12%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Section title */
+.section-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.section-title span:first-of-type {
+    color: var(--color-secondary);
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.section-title span:last-of-type,
+.tech-stack-wrapper > span,
+.whats-next > span {
+    font-family: "Gilroy";
+    font-weight: bold;
+    color: var(--color-primary);
+    line-height: 2.1rem;
+    font-size: 1.7rem;
+}
+
+/* Section content */
+.section-content,
+.tech-stack-wrapper,
+.whats-next {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section-content p,
+.whats-next > p {
+    color: var(--color-secondary);
+    font-family: "League-Spartan";
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    text-align: justify;
+}
+
+/* Tech stack */
+.tech-stack {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tech-stack > div {
+    flex: 1;
+    background-color: var(--tab-color-primary);
+    padding: 0.8rem 1.5rem 2rem 1.5rem;
+}
+
+.tech-stack div span {
+    color: var(--color-primary);
+    font-family: "Mukta";
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.tech-stack div .stack {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+
+.tech-stack div .stack li {
+    flex: 1;
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.tech-stack div .stack li:first-of-type {
+    margin-top: 1rem;
+}
+
+.tech-stack div:nth-of-type(2) {
+    background-color: var(--color-base);
+    stroke: var(--background-color-primary);
+    stroke-width: 0.5px;
+}
+
+.tech-stack div .stack li a {
+    color: var(--color-base);
+    font-family: "League-Spartan";
+    text-decoration: underline;
+}
+
+.tech-stack div:nth-of-type(2) li a {
+    color: var(--color-primary);
+}
+
+/* Media queries */
+@media (max-width: 180px) {
+    .tech-stack > div {
+        word-break: break-all;
+    }
+}

@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+/* Import custom font(s) */
+@font-face {
+  font-family: "League-Spartan";
+  src: url("../../assets/fonts/League-Spartan/LeagueSpartan-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Titanium-Web";
+  src: url("../../assets/fonts/Titillium-Web/TitilliumWeb-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: url("../../assets/fonts/Mukta/Mukta-Regular.ttf"),
+    url("../../assets/fonts/Mukta/Mukta-SemiBold.ttf"),
+    url("../../assets/fonts/Mukta/Mukta-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat/Montserrat-Regular.ttf"),
+    url("../../assets/fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../assets/fonts/Gilroy/Gilroy-Regular.woff"),
+    url("../../assets/fonts/Gilroy/Gilroy-Bold.woff"),
+    url("../../assets/fonts/Gilroy/Gilroy-Heavy.woff");
+}
+
+/* Theme modifier */
+/* Light theme */
+:root {
+  --color-base: hsl(38, 100%, 58%);
+  --color-primary: hsl(210, 5%, 92%);
+  --color-secondary: hsl(226, 5%, 63%);
+  --background-color-primary: hsl(216, 23%, 17%);
+  --background-color-secondary: hsl(217, 24%, 15%);
+  --tab-color-primary: hsl(216, 20%, 20%);
+  --tab-color-hover: hsl(215, 20%, 30%);
+  --shadow-color-normal: hsla(0, 0%, 0%, 0.1);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color-secondary);
+}
+
+/* width */
+textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+textarea::-webkit-scrollbar-track {
+  background: var(--color-primary);
+  border-radius: 999rem;
+  -webkit-border-radius: 999rem;
+  -moz-border-radius: 999rem;
+  -ms-border-radius: 999rem;
+  -o-border-radius: 999rem;
+}
+
+/* Handle */
+textarea::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 999rem;
+  -webkit-border-radius: 999rem;
+  -moz-border-radius: 999rem;
+  -ms-border-radius: 999rem;
+  -o-border-radius: 999rem;
+}
+
+@media (max-width: 1023px) {
+  html {
+    font-size: 14px;
+  }
+}
