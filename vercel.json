@@ -17,11 +17,15 @@
         },
         {
             "src": "/",
-            "dest": "dist/src/home.html"
+            "dest": "dist/src/"
         },
         {
             "src": "/(.+)",
             "dest": "dist/$1"
+        },
+        {
+            "src": "/services",
+            "dest": "services/"
         }
     ]
 }
