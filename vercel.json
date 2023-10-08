@@ -28,6 +28,10 @@
             "dest": "dist/src/aboutweb.html"
         },
         {
+            "src": "/partials/(.*)",
+            "dest": "dist/src/partials/(.*)"
+        },
+        {
             "src": "/resume",
             "dest": "dist/docs/"
         },
