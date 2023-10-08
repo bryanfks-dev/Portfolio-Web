@@ -8,7 +8,7 @@ const send_mail = function (name, email, message) {
         service: 'gmail',
         auth: {
             user: 'bryanfernandoks11@gmail.com',
-            pass: process.env.TRANSPORTER_PASSWORD
+            pass: process.env.transporterpassword
         }
     });
 
