@@ -28,8 +28,12 @@
             "dest": "dist/src/aboutweb.html"
         },
         {
-            "src": "/partials/(.*)",
-            "dest": "dist/src/partials/(.*)"
+            "src": "/partials/navbar",
+            "dest": "dist/src/partials/navbar.js"
+        },
+        {
+            "src": "/partials/footer",
+            "dest": "dist/src/partials/footer.js"
         },
         {
             "src": "/resume",
