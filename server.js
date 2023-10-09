@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/dist'));
 const PORT = process.env.PORT || 5000;
 
 /* Service(s) */
-const send_mail = require("services/sendmail.js");
+const send_mail = require(__dirname + "/services/sendmail.js");
 
 // Server route(s)
 // Index route
