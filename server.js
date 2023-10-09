@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const PORT = process.env.PORT || 5000;
 
 /* Service(s) */
-const send_mail = require(__dirname + "/services/sendmail.js");
+import send_mail from "./services/sendmail.js";
 
 // Server route(s)
 // Index route
@@ -34,7 +34,7 @@ app.get('/resume', (req, res) => {
 app.get('/send', (req, res) => {
     const [name, email, body] = [req.query.name, req.query.email, req.query.message];
 
-    send_mail.send_mail(name, email, body);
+    send_mail(name, email, body);
 
     res.redirect('/#mail');
 });
