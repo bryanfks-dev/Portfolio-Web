@@ -2,12 +2,9 @@
 const express = require('express');
 const app = express();
 
-const bodyParser = require('body-parser');
-
 const fs = require('fs');
 
 app.use(express.static(__dirname + '/dist'));
-app.use(bodyParser.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT || 5000;
 
