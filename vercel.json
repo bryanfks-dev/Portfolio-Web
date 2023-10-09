@@ -12,7 +12,7 @@
     ],
     "routes": [
         {
-            "src": "/services/(.*)",
+            "src": "/(.*)",
             "dest": "server.js"
         },
         {
