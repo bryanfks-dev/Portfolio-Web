@@ -6,11 +6,11 @@ const bodyParser = require('body-parser');
 
 const fs = require('fs');
 
+/* Service(s) */
+const send_mail = require("services/sendmail.js");
+
 app.use(express.static(__dirname + '/dist'));
 app.use(bodyParser.urlencoded({ extended: true }));
-
-/* Service(s) */
-const send_mail = require("./services/sendmail.js");
 
 const PORT = process.env.PORT || 5000;
 
