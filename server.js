@@ -6,10 +6,8 @@ const bodyParser = require('body-parser');
 
 const fs = require('fs');
 
-app.use(express.static(path.join(__dirname + '/dist')));
+app.use(express.static(__dirname + '/dist'));
 app.use(bodyParser.urlencoded({ extended: true }));
-
-const path = require('path');
 
 /* Service(s) */
 const send_mail = require("./services/sendmail.js");
@@ -22,14 +20,6 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/dist/src/home.html');
 });
 
-app.post('/', (req, res) => {
-    const [name, email, message] = [req.body.name, req.body.email, req.body.message];
-
-    send_mail.send_mail(name, email, message);
-
-    res.redirect('/#mail');
-});
-
 // Projects route
 app.get('/projects', (req, res) => {
     res.sendFile(__dirname + '/dist/src/projects.html');
@@ -38,6 +28,15 @@ app.get('/projects', (req, res) => {
 // Resume route
 app.get('/resume', (req, res) => {
     res.sendFile(__dirname + '/dist/docs/resume.pdf');
+});
+
+// Send message route
+app.get('/send', (req, res) => {
+    const [name, email, body] = [req.query.name, req.query.email, req.query.message];
+
+    send_mail.send_mail(name, email, body);
+
+    res.redirect('/#mail');
 });
 
 // About web route
