@@ -2,16 +2,17 @@
 const express = require('express');
 const app = express();
 
+const bodyParser = require('body-parser');
+
 const fs = require('fs');
 
 app.use(express.static(__dirname + '/dist'));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT || 5000;
 
-// Send mail api
-const nodemailer = require('nodemailer');
-
-require('dotenv').config();
+/* Service(s) */
+const send_mail = require("services/sendmail.js");
 
 // Server route(s)
 // Index route
@@ -33,33 +34,7 @@ app.get('/resume', (req, res) => {
 app.get('/send', (req, res) => {
     const [name, email, body] = [req.query.name, req.query.email, req.query.message];
 
-    // Set transporter
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'bryanfernandoks11@gmail.com',
-            pass: process.env.TRANSPORTER_PASSWORD
-        }
-    });
-
-    // Set mail options
-    const mail_options = {
-        from: 'bryanfernandoks11@gmail.com',
-        to: 'bryanfernandoks11@gmail.com',
-        cc: email,
-        subject: 'Hello!',
-        text: `From ${name}(${email}),\n` + body
-    };
-
-    // Send mail
-    transporter.sendMail(mail_options, (err, info) => {
-        if (err) {
-            console.log(`Error sending email: ${err}`);
-        }
-        else {
-            console.log('A mail successfully send');
-        }
-    });
+    send_mail.send_mail(name, email, body);
 
     res.redirect('/#mail');
 });
