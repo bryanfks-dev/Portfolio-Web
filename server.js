@@ -28,10 +28,10 @@ app.get('/resume', (req, res) => {
 });
 
 // Send message route
-app.get('/send', (req, res) => {
+app.get('/send', async (req, res) => {
     const [name, email, body] = [req.query.name, req.query.email, req.query.message];
 
-    send_mail.send_mail(name, email, body);
+    await send_mail.send_mail(name, email, body);
 
     res.redirect('/#mail');
 });
