@@ -29,10 +29,13 @@ app.get('/resume', (req, res) => {
 
 // Send message route
 app.get('/send', async (req, res) => {
+    // Get form input
     const [name, email, body] = [req.query.name, req.query.email, req.query.message];
 
+    // Send mail
     await send_mail.send_mail(name, email, body);
 
+    // Redirect to mail page
     res.redirect('/#mail');
 });
 
