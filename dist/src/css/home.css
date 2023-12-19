@@ -1,7 +1,7 @@
 /* Home section */
 .home-section {
   font-family: "Gilroy";
-  min-height: 100dvh;
+  min-height: 100svh;
   width: 100%;
   display: grid;
   align-items: center;
