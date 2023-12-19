@@ -5,10 +5,10 @@ require('dotenv').config();
 const send_mail = async function (name, email, message) {
     // Set transporter
     const transporter = nodemailer.createTransport({
-        port: 465,
+        port: process.env.MAIL_PORT,
         service: 'gmail',
         auth: {
-            user: 'bryanfernandoks11@gmail.com',
+            user: process.env.SECRET_MAIL,
             pass: process.env.TRANSPORTER_PASSWORD
         },
         secure: true
@@ -16,8 +16,8 @@ const send_mail = async function (name, email, message) {
 
     // Set mail options
     const mail_options = {
-        from: 'bryanfernandoks11@gmail.com',
-        to: 'bryanfernandoks11@gmail.com',
+        from: process.env.SECRET_MAIL,
+        to: process.env.SECRET_MAIL,
         cc: email,
         subject: 'Hello!',
         text: `From ${name}(${email}),\n` + message
