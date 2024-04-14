@@ -1,0 +1,99 @@
+section {
+    padding: 3% 12% 9% 12%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Section title */
+.section-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.section-title span:first-of-type {
+    color: var(--color-secondary);
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.section-title span:last-of-type {
+    font-family: "Gilroy";
+    font-weight: bold;
+    color: var(--color-primary);
+    line-height: 2.1rem;
+    font-size: 1.7rem;
+}
+
+/* Section content */
+.section-content {
+    width: 100%;
+}
+
+/* Card */
+.section-content .card {
+    background-color: var(--tab-color-primary);
+}
+
+.section-content .card .image img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* Content */
+.section-content .card .content {
+    padding: 2rem 1.5rem 5rem 1.5rem;
+}
+
+.section-content .card .content span {
+    font-family: "Mukta";
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.section-content .card .content span:hover {
+    color: var(--color-base);
+    text-decoration: underline;
+}
+
+.section-content .card .content p {
+    color: var(--color-secondary);
+    font-family: "League-Spartan";
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    word-break: break-all;
+    line-height: 1.5rem;
+    text-align: justify;
+}
+
+/* Swiper buttons */
+.swiper-nav-btn {
+    color: var(--color-base);
+}
+
+.swiper-nav-btn::before,
+.swiper-nav-btn::after {
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+}
+
+.swiper-nav-btn:nth-of-type(odd)::before,
+.swiper-nav-btn:nth-of-type(odd)::after {
+    margin-left: -0.7rem;
+}
+
+.swiper-nav-btn:nth-of-type(even)::before,
+.swiper-nav-btn:nth-of-type(even)::after {
+    margin-left: 0.7rem;
+}
+
+/* Pagination bullets */
+.swiper-pagination-bullets {
+    display: none;
+}

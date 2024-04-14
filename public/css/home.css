@@ -1,0 +1,797 @@
+/* Home section */
+.home-section {
+  font-family: "Gilroy";
+  min-height: 100svh;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1.2fr 1fr;
+  background-color: var(--background-color-primary);
+  overflow-x: hidden;
+}
+
+/* Image */
+.home-section img {
+  position: absolute;
+  top: 60%;
+  right: 0;
+  width: 50%;
+  z-index: 1;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  order: 2;
+  transform: translate(0, -60%);
+  -webkit-transform: translate(0, -60%);
+  -moz-transform: translate(0, -60%);
+  -ms-transform: translate(0, -60%);
+  -o-transform: translate(0, -60%);
+}
+
+.home-section .intro-left {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* Name */
+.home-section .intro-name {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0.2rem;
+  order: 1;
+  z-index: 99;
+  transform: translate(-20%, -50%);
+  -webkit-transform: translate(-20%, -50%);
+  -moz-transform: translate(-20%, -50%);
+  -ms-transform: translate(-20%, -50%);
+  -o-transform: translate(-20%, -50%);
+}
+
+.home-section .intro-name::after {
+  content: "";
+  margin-top: 2rem;
+  width: 4rem;
+  height: 0.6rem;
+  background-color: var(--color-base);
+}
+
+.home-section .intro-name span {
+  font-size: 6rem;
+  font-weight: bolder;
+  color: var(--color-primary);
+}
+
+/* Introduction */
+.home-section .introduction {
+  display: flex;
+  position: relative;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 7rem 0 3rem;
+  order: 3;
+}
+
+.home-section .introduction-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.home-section .introduction-wrapper .intro-title {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+
+.home-section .introduction-wrapper .intro-title > span:first-of-type {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--color-secondary);
+}
+
+.home-section .introduction-wrapper .intro-title > span:last-of-type {
+  font-size: 1.7rem;
+  color: var(--color-primary);
+  line-height: 2.1rem;
+  font-weight: bold;
+}
+
+.home-section .introduction-wrapper .intro-desc p {
+  font-family: "League-Spartan";
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+  line-height: 1.3em;
+}
+
+/* Pursue scroll */
+.home-section .introduction .pursue-scroll {
+  position: absolute;
+  bottom: 15%;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+.home-section .introduction .pursue-scroll span {
+  font-family: "Montserrat";
+  color: var(--color-base);
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+.home-section .introduction .pursue-scroll svg {
+  fill: var(--color-base);
+}
+/* -- */
+section:not(#home) {
+  padding: 9% 12%;
+  font-family: "League-Spartan";
+  color: var(--color-secondary);
+}
+
+/* Section top */
+.section-top {
+  display: flex;
+  gap: 9rem;
+}
+
+.section-top > * {
+  flex: 1;
+}
+
+/* Section title */
+.section-title {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.section-title span:first-of-type {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--color-secondary);
+}
+
+.section-title span:last-of-type {
+  font-family: "Gilroy";
+  font-weight: bold;
+  color: var(--color-primary);
+  line-height: 2.1rem;
+  font-size: 1.7rem;
+}
+
+/* Section left and right */
+.section-left,
+.section-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section-left p,
+.section-right p {
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+.section-left > span,
+.section-right > span {
+  text-align: justify;
+  font-size: 1.7rem;
+  line-height: 2.1rem;
+  font-family: "Gilroy";
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+/* About section */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.about-section .section-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.about-section .section-bottom a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--color-base);
+  fill: var(--color-base);
+}
+
+.about-section .section-bottom > span {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+}
+
+.about-section .section-bottom a span {
+  text-decoration: underline;
+  font-family: "Mukta";
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+/* -- */
+/* Portfolio section */
+.portfolio-section {
+  background-color: var(--background-color-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top section */
+.portfolio-section .section-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.portfolio-section .section-top p {
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  text-align: justify;
+}
+
+.portfolio-section .section-bottom {
+  margin-top: 3rem;
+  display: flex;
+  gap: 4rem;
+  flex-direction: column;
+}
+
+/* Skills */
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.1rem;
+}
+
+/* Card */
+.card-wrapper .card {
+  padding: 8rem 2.5rem 3rem 2.5rem;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--tab-color-primary);
+}
+
+.card-wrapper .card:first-of-type {
+  background-color: var(--color-base);
+}
+
+.card-wrapper .card svg {
+  fill: var(--color-base);
+  height: 3.2rem;
+  width: auto;
+}
+
+.card-wrapper .card:first-of-type svg {
+  fill: var(--color-primary);
+}
+
+.card-wrapper .card span {
+  font-family: "Gilroy";
+  font-weight: bold;
+  color: var(--color-primary);
+  font-size: 1.7rem;
+  line-height: 2.1rem;
+  width: 60%;
+}
+
+/* Tech(s) */
+.tech-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  padding: 2rem 0;
+}
+
+.tech-wrapper hr {
+  border: 1px solid var(--tab-color-primary);
+}
+
+.tech-wrapper .skill-banner {
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Title */
+.tech-wrapper .skill-banner span {
+  color: var(--color-primary);
+  font-size: 1.7rem;
+}
+
+.tech-wrapper .skill-banner:nth-last-of-type(1) span {
+  color: var(--color-base);
+}
+
+.tech-wrapper .skill-banner span::after {
+  content: "—";
+  margin-left: 1rem;
+  color: var(--color-base);
+}
+
+/* Content */
+.tech-wrapper .skill-banner .content {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+
+.tech-wrapper .skill-banner .content .img-wrapper {
+  cursor: help;
+}
+
+.tech-wrapper .skill-banner .content .img-wrapper img {
+  height: 36px;
+}
+
+/* Experiences */
+.experiences {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.experiences .section-left .section-title p span {
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+  font-family: "League-Spartan";
+  font-weight: normal;
+}
+
+.experiences .section-right {
+  gap: 1rem;
+}
+
+/* Banner */
+.experiences .banner {
+  display: flex;
+  gap: 0.7rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--tab-color-primary);
+  padding: 1.2rem 1.5rem;
+}
+
+.experiences .banner:first-of-type {
+  background-color: var(--color-base);
+}
+
+.experiences .banner > span:first-of-type {
+  color: var(--color-base);
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  font-family: "League-Spartan";
+}
+
+.experiences .banner:first-of-type > span:first-of-type {
+  color: var(--color-primary);
+}
+
+.experiences .banner > span:nth-of-type(2) {
+  color: var(--color-primary);
+  font-family: "League-Spartan";
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Cont */
+.experiences .cont {
+  color: var(--color-base);
+  scale: 3;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+/* Projects */
+.projects {
+  display: flex;
+  gap: 10rem;
+}
+
+/* Section left */
+.projects .section-left {
+  display: flex;
+  gap: 3rem;
+}
+
+/* Persue explore */
+.projects .section-left .persue-explore {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.projects .section-left .persue-explore span {
+  color: var(--color-base);
+  font-family: "Gilroy";
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+
+.projects .section-left .persue-explore svg {
+  fill: var(--color-base);
+  width: auto;
+  height: 1.3rem;
+}
+
+.projects .section-left .section-title span {
+  color: var(--color-primary);
+  font-size: 1.7rem;
+  font-family: "Gilroy";
+  font-weight: bold;
+}
+
+.projects .section-left .section-title p {
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  font-family: "League-Spartan";
+}
+
+.projects .section-left .section-content {
+  display: flex;
+  gap: 6rem;
+  flex-direction: column;
+}
+
+.projects img {
+  width: 100%;
+}
+
+/* Section right */
+.projects .section-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 3rem;
+}
+
+/* Mail section */
+.mail-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 11rem;
+}
+
+.mail-section > * {
+  flex: 1;
+}
+
+/* Section left */
+.mail-section .section-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mail-section .section-left > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.mail-section .section-left .section-title {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mail-section .section-left .section-title span {
+  font-size: 5rem;
+}
+
+.mail-section .section-left .section-title div {
+  display: flex;
+  align-items: center;
+}
+
+.mail-section .section-left .section-title div svg {
+  width: 6rem;
+  height: auto;
+  fill: var(--color-base);
+}
+
+/* Persue see resume */
+.mail-section .section-left .persue-see {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mail-section .section-left .persue-see span {
+  color: var(--color-base);
+  font-family: "Gilroy";
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+
+.mail-section .section-left .persue-see svg {
+  fill: var(--color-base);
+  width: auto;
+  height: 1.3rem;
+}
+
+/* Section right */
+.mail-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mail-section form * {
+  width: 100%;
+}
+
+/* Input container */
+.mail-section form div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.mail-section form div label {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+}
+
+.mail-section form div input,
+.mail-section form div textarea {
+  font-size: 1.1rem;
+  font-family: "League-Spartan";
+  outline: none;
+  border: none;
+  background-color: var(--background-color-secondary);
+  color: var(--color-secondary);
+  resize: none;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.mail-section form button {
+  margin-top: -0.5rem;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.mail-section form button span {
+  color: var(--color-base);
+  font-size: 1.3rem;
+}
+
+.mail-section form button svg { 
+  fill: var(--color-base);
+}
+
+/* Media queries */
+@media (max-width: 1230px) {
+  .experiences {
+    gap: 2.5rem;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1078px) {
+  .home-section img {
+    width: 70%;
+  }
+
+  .home-section .intro-name {
+    top: 70%;
+    transform: translate(-25%, -70%);
+    -webkit-transform: translate(-25%, -70%);
+    -moz-transform: translate(-25%, -70%);
+    -ms-transform: translate(-25%, -70%);
+    -o-transform: translate(-25%, -70%);
+  }
+
+  .home-section .intro-name span {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 940px) {
+  .tech-wrapper .skill-banner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .tech-wrapper .skill-banner .content {
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 800px) {
+  .home-section img {
+    top: 50%;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+  }
+
+  .mail-section {
+    gap: 6rem;
+  }
+
+  .mail-section .section-left .section-title {
+    gap: 1rem;
+  }
+
+  .mail-section .section-left .section-title span {
+    font-size: 4rem;
+  }
+
+  .mail-section .section-left .section-title div svg {
+    width: 5rem;
+  }
+
+  .mail-section form {
+    align-items: flex-end
+  }
+}
+
+@media (max-width: 767px) {
+  .home-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-section .intro-left {
+    height: 45dvh;
+    margin-top: 10%;
+  }
+
+  .home-section img {
+    width: 30%;
+    right: 20%;
+    top: 30%;
+    transform: translate(20%, -30%);
+    -webkit-transform: translate(20%, -30%);
+    -moz-transform: translate(20%, -30%);
+    -ms-transform: translate(20%, -30%);
+    -o-transform: translate(20%, -30%);
+    order: 1;
+  }
+
+  .home-section .intro-name {
+    top: 50%;
+    left: 20%;
+    transform: translate(-20%, -50%);
+    -webkit-transform: translate(-20%, -50%);
+    -moz-transform: translate(-20%, -50%);
+    -ms-transform: translate(-20%, -50%);
+    -o-transform: translate(-20%, -50%);
+  }
+
+  .home-section .intro-name span {
+    font-size: 4rem;
+  }
+
+  .home-section .introduction {
+    padding: 0 3rem;
+    justify-content: flex-start;
+    height: 55dvh;
+  }
+
+  .home-section .introduction .pursue-scroll {
+    bottom: 30%;
+  }
+
+  .about-section {
+    gap: 4rem !important;
+  }
+
+  .section-top:not(.portfolio-section .section-top) {
+    flex-direction: column;
+    gap: 4rem !important;
+  }
+
+  .projects {
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  .mail-section {
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .home-section img {
+    width: 50%;
+  }
+
+  .projects .img-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .projects .img-wrapper .section-left .section-left-wrapper {
+    gap: 2.5rem;
+  }
+
+  .mail-section .section-left .section-title {
+    gap: 0.5rem;
+  }
+
+  .mail-section .section-left .section-title span {
+    font-size: 3rem;
+  }
+
+  .mail-section .section-left .section-title div svg {
+    width: 4rem;
+  }
+}
+
+@media (max-width: 372px) {
+  .home-section .intro-name span {
+    font-size: 3rem;
+  }
+
+  .home-section .introduction {
+    padding: 0 1rem;
+  }
+
+  .home-section .introduction .pursue-scroll {
+    bottom: 13vh;
+    padding: 1rem;
+  }
+
+  .card-wrapper .card {
+    word-break: break-all;
+  }
+
+  .mail-section .section-left .section-title {
+    gap: 0;
+  }
+
+  .mail-section .section-left .section-title span {
+    font-size: 2rem;
+  }
+
+  .mail-section .section-left .section-title div svg {
+    width: 3rem;
+  }
+}
+
+@media (max-width: 224px) {
+  .home-section .intro-name {
+    word-break: break-all;
+  }
+
+  .home-section .introduction .pursue-scroll {
+    display: none;
+  }
+}
