@@ -21,7 +21,7 @@ const send_mail = async function (name, email, message) {
         to: process.env.SECRET_MAIL,
         cc: email,
         subject: 'Hello!',
-        text: `From ${name}(${email}),\n` + message
+        text: `From ${name}(${email}),\n\n` + message
     };
 
     // Send mail
