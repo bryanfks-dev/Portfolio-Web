@@ -50,7 +50,7 @@ class Footer extends HTMLElement {
                 fill: var(--background-color-primary);
                 }
 
-                .custom-footer .contact a  {
+                .custom-footer .contact a {
                 background-color: var(--color-secondary);
                 padding: .4rem .4rem .1rem .4rem;
                 border-radius: 999rem;
@@ -58,6 +58,10 @@ class Footer extends HTMLElement {
                 -moz-border-radius: 999rem;
                 -ms-border-radius: 999rem;
                 -o-border-radius: 999rem;
+                }
+
+                .custom-footer .contact a:hover {
+                filter: brightness(.7);
                 }
 
                 /* Copyright text */
