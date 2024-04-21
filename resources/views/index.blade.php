@@ -27,7 +27,7 @@
         @include('partials.index.home')
         @include('partials.index.about')
         @include('partials.index.portfolio')
-        @include('partials.index.mail')
+        @include('partials.index.ideas')
     </main>
     <footer>
         <custom-footer/>
@@ -41,17 +41,6 @@
     <script type="text/javascript" src="js/aos.js"></script>
     <script type="text/javascript">
         AOS.init(); // Initialize AOS script
-    </script>
-
-    <!-- Remove this script when resume is available -->
-    <script type="text/javascript">
-        const resume_btn = document.querySelector(".mail-section .section-left .persue-see");
-
-        resume_btn.addEventListener("click", (e) => {
-            e.preventDefault(); // Prevent changing page
-
-            alert("Sorry, resume is not available for now");
-        });
     </script>
 </body>
 

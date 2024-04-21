@@ -129,6 +129,7 @@
 .home-section .introduction .pursue-scroll svg {
   fill: var(--color-base);
 }
+
 /* -- */
 section:not(#home) {
   padding: 9% 12%;
@@ -200,31 +201,6 @@ section:not(#home) {
   gap: 3rem;
 }
 
-.about-section .section-bottom {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.about-section .section-bottom a {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  color: var(--color-base);
-  fill: var(--color-base);
-}
-
-.about-section .section-bottom > span {
-  color: var(--color-primary);
-  font-size: 1.1rem;
-}
-
-.about-section .section-bottom a span {
-  text-decoration: underline;
-  font-family: "Mukta";
-  font-weight: bold;
-  font-size: 1.2rem;
-}
 /* -- */
 /* Portfolio section */
 .portfolio-section {
@@ -471,124 +447,154 @@ section:not(#home) {
   gap: 3rem;
 }
 
-/* Mail section */
-.mail-section {
-  display: flex;
-  justify-content: space-between;
-  gap: 11rem;
+/* Ideas Section */
+.ideas-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.mail-section > * {
-  flex: 1;
+/* No auth comment */
+.ideas-section .section-bottom .no-auth-com a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--color-base);
+    fill: var(--color-base);
 }
 
-/* Section left */
-.mail-section .section-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.ideas-section .section-bottom .no-auth-com a span {
+    text-decoration: underline;
+    font-family: "Mukta";
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
-.mail-section .section-left > div {
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
+/* Auth comment */
+.ideas-section .section-bottom .auth-com {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
 }
 
-.mail-section .section-left .section-title {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+/* Comment form */
+.ideas-section .section-bottom .auth-com > span {
+    display: inline;
+    color: var(--color-base);
 }
 
-.mail-section .section-left .section-title span {
-  font-size: 5rem;
+.ideas-section .section-bottom .auth-com span p {
+    display: inline;
 }
 
-.mail-section .section-left .section-title div {
-  display: flex;
-  align-items: center;
+.ideas-section .section-bottom .auth-com form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.mail-section .section-left .section-title div svg {
-  width: 6rem;
-  height: auto;
-  fill: var(--color-base);
+.ideas-section .section-bottom .auth-com form div {
+    display: flex;
+    gap: 1.5rem;
 }
 
-/* Persue see resume */
-.mail-section .section-left .persue-see {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.ideas-section .section-bottom .auth-com form .username {
+    color: var(--color-primary);
 }
 
-.mail-section .section-left .persue-see span {
-  color: var(--color-base);
-  font-family: "Gilroy";
-  font-size: 1.3rem;
-  text-decoration: underline;
+.ideas-section .section-bottom .auth-com form input {
+    font-size: 1.1rem;
+    font-family: "League-Spartan";
+    outline: none;
+    border: none;
+    background-color: var(--background-color-secondary);
+    color: var(--color-secondary);
+    padding: 0.3rem 0;
+    border-bottom: 1px solid var(--color-primary);
+    width: 100%;
 }
 
-.mail-section .section-left .persue-see svg {
-  fill: var(--color-base);
-  width: auto;
-  height: 1.3rem;
+.ideas-section .section-bottom .auth-com form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+    background-color: var(--background-color-secondary);
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
 
-/* Section right */
-.mail-section form {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.ideas-section .section-bottom .auth-com form button span {
+    font-size: 1.1rem;
+    font-family: "League-Spartan";
+    font-weight: bold;
+    color: var(--color-base);
 }
 
-.mail-section form * {
-  width: 100%;
+.ideas-section .section-bottom .auth-com form button svg {
+    fill: var(--color-base);
 }
 
-/* Input container */
-.mail-section form div {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
+/* Comment box */
+.ideas-section .section-bottom .auth-com .comment-box {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    width: 100%;
+    overflow-y: scroll;
+    height: 270px;
 }
 
-.mail-section form div label {
-  color: var(--color-primary);
-  font-size: 1.1rem;
+.ideas-section .section-bottom .auth-com .comment-box .is-empty {
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
 }
 
-.mail-section form div input,
-.mail-section form div textarea {
-  font-size: 1.1rem;
-  font-family: "League-Spartan";
-  outline: none;
-  border: none;
-  background-color: var(--background-color-secondary);
-  color: var(--color-secondary);
-  resize: none;
-  padding: 0.3rem 0;
-  border-bottom: 1px solid var(--color-primary);
+/* Comment card */
+.ideas-section .section-bottom .auth-com .comment-box .card {
+    background-color: var(--tab-color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5% 2%;
 }
 
-.mail-section form button {
-  margin-top: -0.5rem;
-  width: fit-content;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
+.ideas-section .section-bottom .auth-com .comment-box .card > div:first-of-type {
+    display: flex;
+    gap: 1rem;
 }
 
-.mail-section form button span {
-  color: var(--color-base);
-  font-size: 1.3rem;
+.ideas-section .section-bottom .auth-com .comment-box .card svg {
+    fill: var(--color-base);
 }
 
-.mail-section form button svg { 
-  fill: var(--color-base);
+.ideas-section .section-bottom .auth-com .comment-box .card .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.ideas-section .section-bottom .auth-com .comment-box .card .username {
+    color: var(--color-primary);
+}
+
+.ideas-section .section-bottom .auth-com .comment-box .card input.comment {
+    background-color: var(--tab-color-primary);
+    border: none;
+}
+
+.ideas-section .section-bottom .auth-com .comment-box .card input.comment.enabled {
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.ideas-section .section-bottom .auth-com .comment-box .card .actions {
+    display: flex;
+    gap: .7rem;
+}
+
+.ideas-section .section-bottom .auth-com .comment-box .card .actions > * {
+    cursor: pointer;
 }
 
 /* Media queries */
@@ -638,26 +644,6 @@ section:not(#home) {
     -moz-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     -o-transform: translate(0, -50%);
-  }
-
-  .mail-section {
-    gap: 6rem;
-  }
-
-  .mail-section .section-left .section-title {
-    gap: 1rem;
-  }
-
-  .mail-section .section-left .section-title span {
-    font-size: 4rem;
-  }
-
-  .mail-section .section-left .section-title div svg {
-    width: 5rem;
-  }
-
-  .mail-section form {
-    align-items: flex-end
   }
 }
 
@@ -721,11 +707,6 @@ section:not(#home) {
     flex-wrap: wrap;
     gap: 3rem;
   }
-
-  .mail-section {
-    flex-direction: column;
-    gap: 4rem;
-  }
 }
 
 @media (max-width: 550px) {
@@ -740,18 +721,6 @@ section:not(#home) {
 
   .projects .img-wrapper .section-left .section-left-wrapper {
     gap: 2.5rem;
-  }
-
-  .mail-section .section-left .section-title {
-    gap: 0.5rem;
-  }
-
-  .mail-section .section-left .section-title span {
-    font-size: 3rem;
-  }
-
-  .mail-section .section-left .section-title div svg {
-    width: 4rem;
   }
 }
 
@@ -771,18 +740,6 @@ section:not(#home) {
 
   .card-wrapper .card {
     word-break: break-all;
-  }
-
-  .mail-section .section-left .section-title {
-    gap: 0;
-  }
-
-  .mail-section .section-left .section-title span {
-    font-size: 2rem;
-  }
-
-  .mail-section .section-left .section-title div svg {
-    width: 3rem;
   }
 }
 

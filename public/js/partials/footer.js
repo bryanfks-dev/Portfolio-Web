@@ -109,7 +109,7 @@ class Footer extends HTMLElement {
                 </div>
                 <!-- Copyright text -->
                 <p>
-                    &copy; 2023 Bryan Fernando
+                    &copy; 2024 Bryan Fernando
                 </p>
             </div>
         `.trim();
