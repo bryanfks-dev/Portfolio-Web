@@ -45,6 +45,11 @@ section:not(#img-viewer) {
     cursor: pointer;
 }
 
+.section-content .card img:hover {
+    filter: brightness(.8);
+    -webkit-filter: brightness(.8);
+}
+
 /* Content */
 .section-content .card .content {
     padding: 2rem 1.5rem 5rem 1.5rem;
@@ -175,6 +180,11 @@ section:not(#img-viewer) {
 #img-viewer .modal .header svg {
     fill: var(--color-base);
     cursor: pointer;
+}
+
+#img-viewer .modal .header svg:hover {
+    filter: brightness(.8);
+    -webkit-filter: brightness(.8);
 }
 
 /* Image */
