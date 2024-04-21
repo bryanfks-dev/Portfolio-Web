@@ -35,10 +35,9 @@
                     class in 12<sup>th</sup> grade Senior High School, where students should assign a goal to do
                     something and track the progress each days. Therefore, I chose to build a simple personal
                     website, but actually that was not my first time develop a website. I'm very enthusiastic that
-                    day, so I swept the project only in 5 working days, from writting the html, css, untill hosted
-                    it.
+                    day, so I swept the project only in 5 days, from writting the html, css, js, until hosted it.
                     <br><br>
-                    Looking back to those days, it is really fun and challanging for me, and I think this project is
+                    Looking back to those days, it is really fun and challenging for me, and I think this project is
                     the reason I'm super insterested into the website development, other than tech development, but
                     (maybe) I could change my interest some day, well who knows the future?
                 </p>
