@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->integer('userId');
+            $table->foreignId('userId')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('username');
             $table->text('comment');
         });

@@ -558,11 +558,7 @@ section:not(#home) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5% 2%;
-}
-
-.ideas-section .section-bottom .auth-com .comment-box .card > div:first-of-type {
-    display: flex;
+    padding: 1rem 1.5rem;
     gap: 1rem;
 }
 
@@ -573,6 +569,7 @@ section:not(#home) {
 .ideas-section .section-bottom .auth-com .comment-box .card .content {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .ideas-section .section-bottom .auth-com .comment-box .card .username {
@@ -582,6 +579,8 @@ section:not(#home) {
 .ideas-section .section-bottom .auth-com .comment-box .card input.comment {
     background-color: var(--tab-color-primary);
     border: none;
+    width: 100%;
+    overflow-x: scroll;
 }
 
 .ideas-section .section-bottom .auth-com .comment-box .card input.comment.enabled {

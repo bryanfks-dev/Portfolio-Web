@@ -39,7 +39,7 @@ Route::group(['middleware' => 'guest'], function() {
     });
 
     Route::group(['prefix' => 'login'], function() {
-        Route::get('/', [LoginController::class, 'view']);
+        Route::get('/', [LoginController::class, 'view'])->name('login');
 
         Route::post('/', [LoginController::class, 'handleLogin'])->middleware('throttle:login');
     });
