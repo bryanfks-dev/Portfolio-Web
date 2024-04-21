@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bry/fks</title>
 
+    <meta name="description" content="Explore bryanfks' finest works, presenting a combination of passion and skill.">
+
     <!-- Icon -->
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 
@@ -24,26 +26,7 @@
     <main>
         @include('partials.index.home')
         @include('partials.index.about')
-        <!-- Portfolio -->
-        <section class="portfolio-section" id="portfolio">
-            <!-- Top section -->
-            <div class="section-top">
-                <div class="section-title">
-                    <span data-aos="fade-up" data-aos-once="true">&mdash; Portfolio</span>
-                    <span data-aos="fade-up" data-aos-once="true">All Skills, Experiences, Wonderful
-                        Projects.</span>
-                </div>
-                <p data-aos="fade-up" data-aos-delay="50" data-aos-once="true">&ldquo;Everything you can imagine is
-                    real.&rdquo;<br><span style="color: var(--color-base);">&mdash;Pablo Picasso</span></p>
-            </div>
-            <!-- Bottom Section -->
-            <div class="section-bottom">
-                @include('partials.index.skills')
-                @include('partials.index.techs')
-                @include('partials.index.experiences')
-                @include('partials.index.projects')
-            </div>
-        </section>
+        @include('partials.index.portfolio')
         @include('partials.index.mail')
     </main>
     <footer>
@@ -51,8 +34,8 @@
     </footer>
 
     <!-- JS script link(s) -->
-    <script type="text/javascript" src="js/navbar.js"></script>
-    <script type="text/javascript" src="js/footer.js"></script>
+    <script type="module" src="js/partials/navbar.js"></script>
+    <script type="module" src="js/partials/footer.js"></script>
 
     <!-- AOS Script -->
     <script type="text/javascript" src="js/aos.js"></script>

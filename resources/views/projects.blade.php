@@ -33,62 +33,9 @@
             </div>
             <!-- Content -->
             <div class="section-content swiper" data-aos="fade-up" data-aos-delay="50" data-aos-once="true">
-                <div class="swiper-wrapper">
-                    <!-- File Sharing -->
-                    <div class="card swiper-slide">
-                        <div class="image">
-                            <img src="assets/img/projects/file_sharing.png" alt="File Sharing">
-                        </div>
-                        <div class="content">
-                            <a target="_blank" rel="noopener noreferrer"
-                                href="https://github.com/bryanfks-dev/Sharing-File-Web">
-                                <span class="title">File Sharing Web.</span>
-                            </a>
-                            <p>File sharing web based across LAN.</p>
-                        </div>
-                    </div>
-                    <!-- Custom Browser Homepage -->
-                    <div class="card swiper-slide">
-                        <div class="image">
-                            <img src="assets/img/projects/browser_homepage.png" alt="Custom Browser Homepage">
-                        </div>
-                        <div class="content">
-                            <a target="_blank" rel="noopener noreferrer"
-                                href="https://github.com/bryanfks-dev/Browser-Homepage">
-                                <span class="title">Custom Browser Homepage.</span>
-                            </a>
-                            <p>A terminal based custom browser homepage.</p>
-                        </div>
-                    </div>
-                    <!-- Joelbid Furniture -->
-                    <div class="card swiper-slide">
-                        <div class="image">
-                            <img src="assets/img/projects/joelbid_furniture.png" alt="Joelbid Furniture E-commerce">
-                        </div>
-                        <div class="content">
-                            <a target="_blank" rel="noopener noreferrer"
-                                href="https://github.com/bryanfks-dev/FinProject-BackendDevelopment-2023">
-                                <span class="title">Joelbid Furniture.</span>
-                            </a>
-                            <p>Furniture e-commerce website application, for my Bina Nusantara Computer Club Final
-                                Project.</p>
-                        </div>
-                    </div>
-                    <!-- To do -->
-                    <div class="card swiper-slide">
-                        <div class="image">
-                            <img src="assets/img/projects/todo.png" alt="Todo">
-                        </div>
-                        <div class="content">
-                            <a target="_blank" rel="noopener noreferrer"
-                                href="https://github.com/bryanfks-dev/MidProject-BackendDevelopment-2022">
-                                <span class="title">To do.</span>
-                            </a>
-                            <p>A simple to-do list website that let you list all your tasks, for my Bina Nusantara
-                                Computer Club Mid Project.</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Cards -->
+                <div class="swiper-wrapper"></div>
+                <!-- Navigations -->
                 <div class="swiper-nav-btn swiper-button-next"></div>
                 <div class="swiper-nav-btn swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
@@ -103,61 +50,23 @@
             </div>
             <!-- Content -->
             <div class="section-content swiper" data-aos="fade-up" data-aos-delay="50" data-aos-once="true">
-                <div class="swiper-wrapper">
-                    <!-- MyHome -->
-                    <div class="card swiper-slide">
-                        <div class="image">
-                            <img src="assets/img/projects/myhome.jpg" alt="MyHome App">
-                        </div>
-                        <div class="content">
-                            <a target="_blank" rel="noopener noreferrer"
-                                href="https://github.com/bryanfks-dev/MyHome-AR">
-                                <span class="title">MyHome.</span>
-                            </a>
-                            <p>View and explore your dream home using Augmented Reality, for Multimedia
-                                Systems Course.</p>
-                        </div>
-                    </div>
-                    <!-- Notify -->
-                    <div class="card swiper-slide">
-                        <div class="image">
-                            <img src="assets/img/projects/notify.jpg" alt="Notify App">
-                        </div>
-                        <div class="content">
-                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/bryanfks-dev/Notify">
-                                <span class="title">Notify.</span>
-                            </a>
-                            <p>An app that always moderates your dormitory or apartement fees and eat cost.</p>
-                        </div>
-                    </div>
-                    <!-- Spectrum Quiz -->
-                    <div class="card swiper-slide">
-                        <div class="image">
-                            <img src="assets/img/projects/spectrum_quiz.jpg" alt="Spectrum Quiz App">
-                        </div>
-                        <div class="content">
-                            <a target="_blank" rel="noopener noreferrer"
-                                href="https://github.com/bryanfks-dev/Spectrum-QUIZ">
-                                <span class="title">Spectrum Quiz.</span>
-                            </a>
-                            <p>Quiz based app for Autism Spectrum Disorder Rehabilitation, for Human Computer
-                                Interaction Course.</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Cards -->
+                <div class="swiper-wrapper"></div>
+                <!-- Navigations -->
                 <div class="swiper-nav-btn swiper-button-next"></div>
                 <div class="swiper-nav-btn swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
         </section>
+        @include('partials.projects.image_viewer')
     </main>
     <footer>
         <custom-footer/>
     </footer>
 
     <!-- JS script link(s) -->
-    <script type="text/javascript" src="js/navbar.js"></script>
-    <script type="text/javascript" src="js/footer.js"></script>
+    <script type="module" src="js/partials/navbar.js"></script>
+    <script type="module" src="js/partials/footer.js"></script>
 
     <!-- Swiper JS -->
     <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
@@ -165,6 +74,13 @@
     <script type="text/javascript" src="js/aos.js"></script>
     <script type="text/javascript">
         AOS.init(); // Initialize AOS script
+    </script>
+
+    <script type="text/javascript" src="js/projectHandler.js"></script>
+
+    <!-- Initialize project cards -->
+    <script type="text/javascript">
+        initProjectCards();
     </script>
 
     <!-- Main Padding Top Script -->

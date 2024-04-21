@@ -5,25 +5,25 @@
         <span data-aos="fade-left" data-aos-once="true">Frontend Skills.</span>
         <div class="content">
             <!-- HTML5 -->
-            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="400"
+            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="350"
                 data-aos-once="true">
                 <img src="assets/img/icons/html5.png" alt="HTML5" title="HTML5">
             </div>
             <!-- CSS3 -->
-            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="350"
+            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="300"
                 data-aos-once="true">
                 <img src="assets/img/icons/css3.png" alt="CSS3" title="CSS3">
             </div>
+            <!-- Javascript -->
+            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="200"
+                data-aos-once="true">
+                <img src="assets/img/icons/js.png" alt="Javascript" title="Javascript">
+            </div>
             <!-- Tailwind CSS -->
-            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="300"
+            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="250"
                 data-aos-once="true">
                 <img src="assets/img/icons/tailwindcss.png" alt="Tailwind CSS"
                     title="Tailwind CSS">
-            </div>
-            <!-- Javascript -->
-            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="250"
-                data-aos-once="true">
-                <img src="assets/img/icons/js.png" alt="Javascript" title="Javascript">
             </div>
             <div class="img-wrapper" data-aos="fade-right" data-aos-delay="200"
                 data-aos-once="true">
@@ -46,39 +46,34 @@
         <span data-aos="fade-left" data-aos-delay="100" data-aos-once="true">Backend Skills.</span>
         <div class="content">
             <!-- NodeJS -->
-            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="650"
+            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="300"
                 data-aos-once="true">
                 <img src="assets/img/icons/nodejs.png" alt="Node.js" title="Node.js">
             </div>
             <!-- ExpressJS -->
-            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="600"
+            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="250"
                 data-aos-once="true">
                 <img src="assets/img/icons/express.png" alt="ExpressJS" title="Express">
             </div>
             <!-- PHP -->
-            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="300"
+            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="200"
                 data-aos-once="true">
                 <img src="assets/img/icons/php.png" alt="PHP" title="PHP">
             </div>
             <!-- Laravel -->
-            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="250"
+            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="150"
                 data-aos-once="true">
                 <img src="assets/img/icons/laravel.png" alt="Laravel" title="Laravel">
             </div>
             <!-- Python -->
-            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="200"
+            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="100"
                 data-aos-once="true">
                 <img src="assets/img/icons/python.png" alt="Python" title="Python">
             </div>
             <!-- Flask -->
-            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="150"
+            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="50"
                 data-aos-once="true">
                 <img src="assets/img/icons/flask.png" alt="Flask" title="Flask">
-            </div>
-            <!-- MySQL -->
-            <div class="img-wrapper" data-aos="fade-right" data-aos-delay="100"
-                data-aos-once="true">
-                <img src="assets/img/icons/mysql.png" alt="MySQL" title="MySQL">
             </div>
         </div>
     </div>

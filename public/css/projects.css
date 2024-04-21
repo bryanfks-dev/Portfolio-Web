@@ -1,4 +1,4 @@
-section {
+section:not(#img-viewer) {
     padding: 3% 12% 9% 12%;
     display: flex;
     flex-direction: column;
@@ -37,11 +37,17 @@ section {
     background-color: var(--tab-color-primary);
 }
 
-.section-content .card .image img {
+.section-content .card img {
     height: 180px;
     width: 100%;
     object-fit: cover;
     object-position: top;
+    cursor: pointer;
+}
+
+.section-content .card img:hover {
+    filter: brightness(.8);
+    -webkit-filter: brightness(.8);
 }
 
 /* Content */
@@ -54,6 +60,10 @@ section {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--color-primary);
+}
+
+.section-content .card .content span::after {
+    content: '.';
 }
 
 .section-content .card .content span:hover {
@@ -69,6 +79,10 @@ section {
     word-break: break-all;
     line-height: 1.5rem;
     text-align: justify;
+}
+
+.section-content .card .content p::after {
+    content: '.';
 }
 
 /* Swiper buttons */
@@ -96,4 +110,87 @@ section {
 /* Pagination bullets */
 .swiper-pagination-bullets {
     display: none;
+}
+
+/* Image viewer */
+#img-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(0, 0%, 0%, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 99;
+}
+
+#img-viewer.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Modal */
+#img-viewer .modal {
+    background-color: var(--tab-color-primary);
+    min-width: 75vw;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transform: translateY(30%);
+    -webkit-transform: translateY(30%);
+    -moz-transform: translateY(30%);
+    -ms-transform: translateY(30%);
+    -o-transform: translateY(30%);
+    transition: transform .4s ease-in-out;
+    -webkit-transition: transform .4s ease-in-out;
+    -moz-transition: transform .4s ease-in-out;
+    -ms-transition: transform .4s ease-in-out;
+    -o-transition: transform .4s ease-in-out;
+}
+
+#img-viewer.open .modal {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+/* Header */
+#img-viewer .modal .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Title */
+#img-viewer .modal .header span {
+    font-family: "Mukta";
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+/* Close button */
+#img-viewer .modal .header svg {
+    fill: var(--color-base);
+    cursor: pointer;
+}
+
+#img-viewer .modal .header svg:hover {
+    filter: brightness(.8);
+    -webkit-filter: brightness(.8);
+}
+
+/* Image */
+#img-viewer .modal img {
+    max-height: 60vh;
+    width: 100%;
+    object-fit: scale-down;
+    object-position: top;
 }
