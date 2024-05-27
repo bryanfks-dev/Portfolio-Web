@@ -26,7 +26,7 @@ class Project {
     }
 }
 
-const appendCards = ({projects, swiperWrapperIdx}) => {
+const appendCards = ({ projects, swiperWrapperIdx }) => {
     for (const project of projects) {
         swiperWrapper[swiperWrapperIdx].innerHTML += project.card();
     }

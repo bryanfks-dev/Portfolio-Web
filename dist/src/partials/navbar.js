@@ -8,6 +8,20 @@ class Navbar extends HTMLElement {
     }
 
     render() {
+        const socialMediaHrefs = {
+            instagram: 'https://www.instagram.com/_bryfks/',
+            github: 'https://github.com/bryanfks-dev',
+            linkedin: 'https://github.com/bryanfks-dev',
+            email: '/#mail'
+        }
+
+        const redirectUrls = {
+            home: '/#home',
+            about: '/#about',
+            portfolio: '/#portfolio',
+            aboutWeb: '/about-web'
+        }
+
         const defaultNav = `
             <style type="text/css">
                 .navbar {
@@ -213,18 +227,18 @@ class Navbar extends HTMLElement {
             <!-- Navbar -->
             <div class="navbar">
                 <!-- Logo -->
-                <a href="/#home">
+                <a href="${redirectUrls.home}">
                     <span>/</span>
                 </a>
                 <!-- Main actions -->
                 <nav class="main-nav" id="menu">
                     <!-- About -->
                     <li>
-                        <a href="/#about" class="menu">About</a>
+                        <a href="${redirectUrls.about}" class="menu">About</a>
                     </li>
                     <!-- Portfolio -->
                     <li>
-                        <a href="/#portfolio" class="menu">Portfolio</a>
+                        <a href="${redirectUrls.portfolio}" class="menu">Portfolio</a>
                     </li>
                     <!-- Contact -->
                     <li>
@@ -234,7 +248,7 @@ class Navbar extends HTMLElement {
                         <div class="contact-modal">
                             <!-- Instagram -->
                             <ol>
-                                <a rel="noopener noreferrer" href="https://www.instagram.com/bry.fernando/"
+                                <a rel="noopener noreferrer" href="${socialMediaHrefs.instagram}"
                                     target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="hsl(338, 72%, 57%)">
@@ -251,7 +265,7 @@ class Navbar extends HTMLElement {
                             </ol>
                             <!-- Github -->
                             <ol>
-                                <a rel="noopener noreferrer" href="https://github.com/bryanfks-dev" target="_blank">
+                                <a rel="noopener noreferrer" href="${socialMediaHrefs.github}" target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="hsl(173, 58%, 39%)">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -264,7 +278,7 @@ class Navbar extends HTMLElement {
                             <!-- Linkedin -->
                             <ol>
                                 <a rel="noopener noreferrer"
-                                    href="https://www.linkedin.com/in/bryan-fernando-2394bb21b/" target="_blank">
+                                    href="${socialMediaHrefs.linkedin}" target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="hsl(210, 90%, 40%)">
                                         <circle cx="4.983" cy="5.009" r="2.188"></circle>
@@ -277,7 +291,7 @@ class Navbar extends HTMLElement {
                             </ol>
                             <!-- Email -->
                             <ol>
-                                <a href="/#mail">
+                                <a href="${socialMediaHrefs.email}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="hsl(4, 54%, 46%)">
                                         <path
@@ -299,7 +313,7 @@ class Navbar extends HTMLElement {
                     <!-- More modal -->
                     <div class="more-modal">
                         <li>
-                            <a href="/aboutweb">
+                            <a href="${redirectUrls.aboutWeb}">
                                 <span>About Web</span>
                             </a>
                         </li>
@@ -434,7 +448,7 @@ class Navbar extends HTMLElement {
                 <!-- More action modal -->
                 <div class="more-modal">
                     <!-- More menu(s) -->
-                    <a class="more-menu" href="/aboutweb">
+                    <a class="more-menu" href="${redirectUrls.aboutWeb}">
                         <li>
                             <span>About Website</span>
                         </li>
@@ -444,7 +458,7 @@ class Navbar extends HTMLElement {
                     <div class="contact">
                         <!-- Instagram -->
                         <li>
-                            <a rel="noopener noreferrer" href="https://www.instagram.com/bry.fernando/" target="_blank">
+                            <a rel="noopener noreferrer" href="${socialMediaHrefs.instagram}" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="hsl(338, 72%, 57%)">
                                     <path
                                         d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z">
@@ -458,7 +472,7 @@ class Navbar extends HTMLElement {
                         </li>
                         <!-- Github -->
                         <li>
-                            <a rel="noopener noreferrer" href="https://github.com/bryanfks-dev" target="_blank">
+                            <a rel="noopener noreferrer" href="${socialMediaHrefs.github}" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="hsl(173, 58%, 39%)">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z">
@@ -468,7 +482,7 @@ class Navbar extends HTMLElement {
                         </li>
                         <!-- Linkedin -->
                         <li>
-                            <a rel="noopener noreferrer" href="https://www.linkedin.com/in/bryan-fernando-2394bb21b/" target="_blank">
+                            <a rel="noopener noreferrer" href="${socialMediaHrefs.linkedin}" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="hsl(210, 90%, 40%)">
                                     <circle cx="4.983" cy="5.009" r="2.188"></circle>
                                     <path
@@ -479,7 +493,7 @@ class Navbar extends HTMLElement {
                         </li>
                         <!-- Email -->
                         <li>
-                            <a href="/#mail">
+                            <a href="${socialMediaHrefs.email}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="hsl(4, 54%, 46%)">
                                     <path
                                         d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z">
@@ -493,7 +507,7 @@ class Navbar extends HTMLElement {
                 <nav>
                     <!-- Home -->
                     <li>
-                        <a href="/#home">
+                        <a href="${redirectUrls.home}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="var(--color-base)">
                                 <path
@@ -504,7 +518,7 @@ class Navbar extends HTMLElement {
                     </li>
                     <!-- About -->
                     <li>
-                        <a href="/#about">
+                        <a href="${redirectUrls.about}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="var(--color-primary)">
                                 <path
@@ -515,7 +529,7 @@ class Navbar extends HTMLElement {
                     </li>
                     <!-- Portfolio -->
                     <li>
-                        <a href="/#portfolio">
+                        <a href="${redirectUrls.portfolio}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="var(--color-primary)">
                                 <path
