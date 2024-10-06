@@ -158,7 +158,7 @@ export default function DesktopNavbar(): JSX.Element {
         scrolled && "bg-background-primary shadow-sm",
       )}
     >
-      <div className={clsx(scrolled ? "px-16 py-2" : "px-8 py-4")}>
+      <div className={clsx(scrolled ? "px-24 py-2" : "px-12 py-4")}>
         <div className="flex h-16 items-center justify-between *:flex-1">
           <div className="md:flex md:items-center md:gap-12">
             <Link className="block select-none" href="#">
