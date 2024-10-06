@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import PrimaryButton from "./components/primary-button";
+import PrimaryButton from "./components/primaryButton";
 
 /**
  * NotFound is a component that renders the not found page.

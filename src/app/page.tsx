@@ -1,4 +1,4 @@
-import DesktopNavbar from "./components/desktop-navbar";
+import DesktopNavbar from "./components/desktopNavbar";
 import IntroSection from "./home/intro";
 
 export default function Home() {
