@@ -154,7 +154,7 @@ export default function DesktopNavbar(): JSX.Element {
   return (
     <header
       className={clsx(
-        "fixed top-0 w-full",
+        "fixed top-0 w-full z-50",
         scrolled && "bg-background-primary shadow-sm",
       )}
     >
