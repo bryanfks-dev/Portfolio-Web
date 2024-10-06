@@ -39,7 +39,7 @@ export default function IntroSection(): JSX.Element {
     <section className="relative h-dvh w-full overflow-hidden">
       <div className="relative z-40 flex h-full items-center px-24">
         <div className="flex gap-4 *:flex-1">
-          <div className="flex flex-col gap-24">
+          <div className="flex flex-col gap-16">
             <div className="flex flex-col gap-6">
               <div className="w-fit rounded-full border-2 border-text-secondary px-6 py-3 font-semibold text-text-secondary">
                 Back-end Engineer
