@@ -8,10 +8,14 @@ import HomeIcon from "@/presentation/icons/home";
 import { usePathname } from "next/navigation";
 import UserIcon from "@/presentation/icons/user";
 import LightningIcon from "@/presentation/icons/lightning";
-import CodeIcon from "@/presentation/icons/code";
 import React from "react";
 import BrightnessIcon from "@/presentation/icons/brigthness";
 import ChatIcon from "@/presentation/icons/chat";
+import BlockCodeIcon from "@/presentation/icons/blockCode";
+import HomeSolidIcon from "@/presentation/icons/homeSolid";
+import UserSolidIcon from "@/presentation/icons/userSolid";
+import LightningSolidIcon from "@/presentation/icons/lightningSolid";
+import BlockCodeSolidIcon from "@/presentation/icons/blockCodeSolid";
 
 /**
  * DekstopNavbar is a component that renders the navbar for desktop devices.
@@ -57,22 +61,26 @@ export default function DesktopNavbar(): JSX.Element {
   const navItems: NavbarItemProps[] = [
     {
       label: "Home",
-      icon: HomeIcon,
+      unselectedIcon: HomeIcon,
+      selectedIcon: HomeSolidIcon,
       href: "#",
     },
     {
       label: "About",
-      icon: UserIcon,
+      unselectedIcon: UserIcon,
+      selectedIcon: UserSolidIcon,
       href: "#about",
     },
     {
       label: "Skills",
-      icon: LightningIcon,
+      unselectedIcon: LightningIcon,
+      selectedIcon: LightningSolidIcon,
       href: "#skills",
     },
     {
       label: "Projects",
-      icon: CodeIcon,
+      unselectedIcon: BlockCodeIcon,
+      selectedIcon: BlockCodeSolidIcon,
       href: "#projects",
     },
   ];
@@ -154,7 +162,7 @@ export default function DesktopNavbar(): JSX.Element {
   return (
     <header
       className={clsx(
-        "fixed top-0 w-full z-50",
+        "fixed top-0 z-50 w-full",
         scrolled && "bg-background-primary shadow-sm",
       )}
     >
@@ -184,10 +192,10 @@ export default function DesktopNavbar(): JSX.Element {
           <div className="flex justify-center">
             <nav aria-label="Global">
               <ul className="flex items-center gap-6">
-                {navItems.map((item, index) => (
+                {navItems.map((props, index) => (
                   <React.Fragment key={index}>
                     {index !== 0 && <NavItemSeperator />}
-                    <NavItem currIndex={index} props={item} />
+                    <NavItem currIndex={index} props={props} />
                   </React.Fragment>
                 ))}
               </ul>
@@ -215,9 +223,7 @@ export default function DesktopNavbar(): JSX.Element {
 
             <div
               ref={extraMenuRef}
-              className={clsx(
-                "absolute top-full mt-5 grid h-0 overflow-y-hidden rounded bg-background-primary shadow-md transition-all duration-300",
-              )}
+              className="absolute top-full mt-5 grid h-0 overflow-y-hidden rounded bg-background-primary shadow-md transition-all duration-300"
             >
               <nav className="place-self-center">
                 <ul className="font-medium">
