@@ -6,7 +6,7 @@ import IntroSection from "./home/intro";
 export default function Home() {
   return (
     <>
-      <MobileNavbar />
+      {/* <MobileNavbar /> */}
       <main className="min-h-dvh w-full">
         <IntroSection />
         <AboutMeSection />
