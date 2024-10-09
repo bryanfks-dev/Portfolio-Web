@@ -23,36 +23,36 @@ export default function NotFound(): JSX.Element {
   };
 
   return (
-    <main className="relative min-h-dvh w-full overflow-hidden bg-background-primary">
-      <div className="relative z-40 flex items-center justify-center p-24">
-        <div className="flex flex-row items-center gap-10">
-          <div className="flex flex-col gap-8">
-            <div className="flex flex-col gap-2">
-              <span className="text-7xl font-bold leading-tight text-primary">
-                Sorry!
-                <span className="text-text-primary">
-                  , this page isn&apos;t available.
-                </span>
-              </span>
-              <p className="text-xl">
-                The page you were looking for could&apos;t be found.
-              </p>
-            </div>
+    <main className="flex min-h-dvh w-full select-none items-center justify-center bg-background-primary px-4 py-16 md:px-8 lg:px-16 lg:py-24">
+      <div className="flex w-full flex-col items-center gap-4 lg:flex-row-reverse lg:justify-between ">
+        <span className="font-istockWeb text-9xl font-bold text-subtle lg:text-[20rem]">
+          404
+        </span>
 
-            <PrimaryButton className="w-fit" onClick={() => redirectHome()}>
-              <span>Back to home</span>
-            </PrimaryButton>
-          </div>
-          <div className="flex flex-1 items-end justify-end">
-            <span className="font-istockWeb select-none text-[340px] font-bold text-subtle">
-              404
+        <div className="flex flex-col items-center justify-center gap-8 lg:items-start lg:w-1/2">
+          <div className="flex justify-center">
+            <span className="text-center text-3xl font-bold text-primary lg:text-left lg:text-7xl">
+              Sorry!
+              <span className="text-text-primary">
+                <span>, this page isn’t available.</span>
+              </span>
             </span>
+          </div>
+
+          <div className="flex flex-col items-center gap-20 lg:items-start">
+            <p className="text-center text-sm lg:text-left lg:text-lg">
+              The page you were looking for couldn’t be found, please back to homepage.
+            </p>
+
+            <PrimaryButton
+              onClick={redirectHome}
+              className="w-fit text-sm lg:text-base"
+            >
+              Go back home
+            </PrimaryButton>
           </div>
         </div>
       </div>
-
-      <div className="absolute -left-[15%] -top-[65%] z-10 h-[610px] w-[610px] rounded-full bg-subtle" />
-      <div className="absolute left-[75%] top-[75%] z-10 h-[610px] w-[610px] rounded-full bg-subtle" />
     </main>
   );
 }
