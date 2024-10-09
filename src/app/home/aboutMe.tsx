@@ -25,7 +25,7 @@ export default function AboutMeSection(): JSX.Element {
               {"Behind the {Code}.."}
             </span>
 
-            <p className="text-justify">
+            <p className="text-justify indent-6 tracking-tighter leading-6">
               I&lsquo;m{" "}
               <span className="font-semibold text-primary">
                 {"Bryan Fernando Kurniawan Suhartono {Bryan}"}
@@ -36,13 +36,13 @@ export default function AboutMeSection(): JSX.Element {
           </div>
 
           <div className="flex flex-col gap-4">
-            <span className="flex items-center gap-2 text-justify text-2xl font-bold text-secondary md:text-3xl lg:text-4xl">
+            <span className="flex items-center gap-2 text-justify text-2xl font-bold tracking-tighter text-secondary md:text-3xl lg:text-4xl">
               {
                 "When Passion Meets {Technology}, Passion in Every Line of {Code} to Take on a New Challenges!"
               }
             </span>
 
-            <p className="text-justify">
+            <p className="text-justify indent-6 tracking-tighter">
               Over the past 4-year, I’ve been diving into{" "}
               <span className="font-semibold text-primary">
                 {"{web} and {mobile app development}"}
