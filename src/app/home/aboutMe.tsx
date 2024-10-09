@@ -9,7 +9,10 @@ import Link from "next/link";
  */
 export default function AboutMeSection(): JSX.Element {
   return (
-    <section className="flex flex-col bg-background-primary px-4 py-16 md:px-8 gap-2 lg:px-16 lg:py-24">
+    <section
+      id="about-me"
+      className="flex flex-col gap-2 bg-background-primary px-4 py-16 md:px-8 lg:px-16 lg:py-24"
+    >
       <span className="text-sm font-bold text-primary lg:text-base">
         &mdash; ABOUT ME
       </span>
@@ -60,7 +63,7 @@ export default function AboutMeSection(): JSX.Element {
 
           <Link
             href={"/#message"}
-            className="flex items-center gap-2 font-semibold text-primary underline"
+            className="flex w-fit items-center gap-2 font-semibold text-primary underline"
           >
             send.hi@bryan.com
             <ArrowIcon className="size-4" strokeWidth={3} />
