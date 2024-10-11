@@ -50,7 +50,7 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="bg-invertpx-6 flex flex-col gap-2 overflow-hidden px-6 py-16 md:px-12 md:py-20 lg:px-24 lg:py-28"
+      className="bg-invert flex flex-col gap-2 overflow-hidden px-6 py-16 md:px-12 md:py-20 lg:px-24 lg:py-28"
     >
       <span className="text-sm font-bold text-primary lg:text-base">
         &mdash; SKILLS
