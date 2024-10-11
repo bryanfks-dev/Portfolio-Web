@@ -10,7 +10,8 @@ import StatsSection from "./home/stats";
 export default function Home() {
   return (
     <>
-      <MobileNavbar />
+      {/* <MobileNavbar /> */}
+      <DesktopNavbar />
       <main className="min-h-dvh w-full">
         <IntroSection />
         <AboutMeSection />

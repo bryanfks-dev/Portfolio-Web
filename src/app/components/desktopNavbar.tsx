@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import MenuBarIcon from "../../presentation/icons/menu-bar";
 import HomeIcon from "@/presentation/icons/home";
 import { usePathname } from "next/navigation";
@@ -85,6 +85,9 @@ export default function DesktopNavbar(): JSX.Element {
     },
   ];
 
+  // Create a reference for the navbar.
+  const navbarRef = useRef<HTMLDivElement>(null);
+
   /**
    * NavItem is a component that renders a navbar item.
    *
@@ -102,14 +105,14 @@ export default function DesktopNavbar(): JSX.Element {
     <li>
       <Link
         className={clsx(
-          "select-none font-semibold",
+          "select-none text-lg font-semibold",
           isBasePath && selectedMenu === currIndex
             ? scrolled
-              ? "default"
-              : "invert"
+              ? "text-primary"
+              : "text-secondary"
             : scrolled
-              ? "text-subtle transition hover:brightness-90"
-              : "text-background-primary transition hover:brightness-90",
+              ? "text-subtle hover:brightness-90"
+              : "text-invert hover:brightness-90",
         )}
         href={props.href}
       >
@@ -124,7 +127,7 @@ export default function DesktopNavbar(): JSX.Element {
    * @returns {JSX.Element} The navbar item seperator.
    */
   const NavItemSeperator = (): JSX.Element => (
-    <li className="select-none font-semibold text-default">/</li>
+    <li className="select-none font-semibold">/</li>
   );
 
   /**
@@ -159,14 +162,42 @@ export default function DesktopNavbar(): JSX.Element {
     });
   };
 
+  /**
+   * handleScroll is a function that handles the scroll event.
+   *
+   * @returns {void}
+   */
+  const handleScroll = useCallback(() => {
+    setScrolled((prev) => {
+      if (navbarRef.current === null) {
+        return prev;
+      }
+
+      return scrollY > innerHeight - navbarRef.current.clientHeight;
+    });
+  }, []);
+
+  // Add an event listener to the scroll event.
+  useEffect(() => {
+    addEventListener("scroll", handleScroll);
+
+    return () => removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
   return (
     <header
+      ref={navbarRef}
       className={clsx(
-        "fixed top-0 z-50 w-full",
-        scrolled && "bg-invert shadow-sm",
+        "fixed top-0 z-50 w-full text-lg transition-all duration-300",
+        scrolled && "bg-invert shadow",
       )}
     >
-      <div className={clsx(scrolled ? "px-24 py-2" : "px-12 py-4")}>
+      <div
+        className={clsx(
+          "transition-all duration-300",
+          scrolled ? "px-24 py-2" : "px-12 py-4",
+        )}
+      >
         <div className="flex h-16 items-center justify-between *:flex-1">
           <div className="md:flex md:items-center md:gap-12">
             <Link className="block select-none" href="#">
@@ -174,14 +205,12 @@ export default function DesktopNavbar(): JSX.Element {
               <span
                 className={clsx(
                   "text-2xl font-bold",
-                  scrolled ? "text-default" : "invert",
+                  scrolled ? "text-default" : "text-secondary",
                 )}
               >
                 bryan
                 <span
-                  className={clsx(
-                    scrolled ? "default" : "text-background-primary",
-                  )}
+                  className={clsx(scrolled ? "text-primary" : "text-invert")}
                 >
                   fks.
                 </span>
@@ -209,40 +238,40 @@ export default function DesktopNavbar(): JSX.Element {
             >
               <MenuBarIcon
                 className={clsx(
-                  "size-6",
-                  scrolled
-                    ? extraMenuOpenned
-                      ? ""
-                      : "default"
-                    : extraMenuOpenned
-                      ? "invert"
-                      : "text-background-primary group-hover:invert",
+                  "size-6 group-hover:brightness-75",
+                  extraMenuOpenned
+                    ? scrolled
+                      ? "text-primary"
+                      : "text-secondary"
+                    : scrolled
+                      ? "text-subtle"
+                      : "text-invert",
                 )}
               />
             </div>
 
             <div
               ref={extraMenuRef}
-              className="absolute top-full mt-5 grid h-0 overflow-y-hidden rounded bg-invert shadow-md transition-all duration-300"
+              className="bg-invert absolute top-full mt-5 grid h-0 overflow-y-hidden rounded shadow-md transition-all duration-300"
             >
               <nav className="place-self-center">
                 <ul className="font-medium">
                   <li
-                    className="cursor-pointer bg-invert p-4 hover:brightness-90"
+                    className="bg-invert cursor-pointer px-6 py-4 hover:brightness-90"
                     onClick={() => {
                       toggleExtraMenu();
                     }}
                   >
                     <span className="flex items-center gap-4">
                       <BrightnessIcon
-                        className="size-6 default"
+                        className="default size-6 text-primary"
                         strokeWidth={0.5}
                       />
                       <p className="select-none">Appearance Setup</p>
                     </span>
                   </li>
                   <li
-                    className="cursor-pointer bg-invert p-4 hover:brightness-90"
+                    className="bg-invert cursor-pointer px-6 py-4 hover:brightness-90"
                     onClick={() => toggleExtraMenu()}
                   >
                     <Link
@@ -250,7 +279,7 @@ export default function DesktopNavbar(): JSX.Element {
                       className="flex items-center gap-4"
                     >
                       <ChatIcon
-                        className="size-6 default"
+                        className="default size-6 text-primary"
                         strokeWidth={2}
                       />
                       <p className="select-none">Tell Project Idea</p>
