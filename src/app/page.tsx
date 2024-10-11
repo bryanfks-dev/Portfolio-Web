@@ -1,4 +1,5 @@
 import DesktopNavbar from "./components/desktopNavbar";
+import Footer from "./components/footer";
 import MobileNavbar from "./components/mobileNavbar";
 import AboutMeSection from "./home/aboutMe";
 import ContactSection from "./home/contact";
@@ -17,6 +18,8 @@ export default function Home() {
         <SkillsSection />
         <ContactSection />
       </main>
+
+      <Footer />
     </>
   );
 }

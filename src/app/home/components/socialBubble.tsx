@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Link from "next/link";
 
 /**
@@ -15,7 +16,12 @@ export default function SocialBubble(props: SocialBubbleProps): JSX.Element {
       href={props.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="rounded-full border border-default bg-default p-3 text-invert hover:bg-transparent hover:text-default focus:ring"
+      className={clsx(
+        "rounded-full border p-3 focus:ring",
+        props.className
+          ? props.className
+          : "border-default bg-default text-invert hover:text-default hover:bg-transparent",
+      )}
     >
       <span className="sr-only">{props.socialName}</span>
       <props.socialIcon className="size-7" strokeWidth={0} />
