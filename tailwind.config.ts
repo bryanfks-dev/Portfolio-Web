@@ -22,7 +22,7 @@ const config: Config = {
         "background-primary": "#EDE8F5",
         subtle: "#ADBBDA",
         highlight: "#8697C4",
-        "text-primary": "#000000",
+        "text-primary": "#374151",
         "text-secondary": "#FFFFFF",
       },
     }),

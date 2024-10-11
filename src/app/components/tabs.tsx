@@ -59,7 +59,7 @@ export default function Tabs(props: TabsProps): JSX.Element {
 
         <select
           id="Tab"
-          className="w-full rounded-xl border-2 border-subtle p-3 focus:border-primary"
+          className="w-full rounded-lg border-2 border-subtle p-3 focus:border-primary"
           onChange={selectOption}
         >
           {props.items.map((item, index) => (
@@ -77,7 +77,7 @@ export default function Tabs(props: TabsProps): JSX.Element {
               <span
                 key={index}
                 className={clsx(
-                  "shrink-0 cursor-pointer border-b-2 px-1 pb-4 font-semibold",
+                  "shrink-0 cursor-pointer select-none border-b-2 px-1 pb-4 font-semibold",
                   selected === index
                     ? "border-primary text-primary"
                     : "border-transparent text-highlight hover:brightness-90",

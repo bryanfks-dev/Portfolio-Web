@@ -28,7 +28,7 @@ export default function SkillCard(props: SkillProps): JSX.Element {
           alt={props.label}
         />
 
-        <span className="hidden font-bold text-text-secondary md:block">
+        <span className="hidden text-sm font-bold text-text-secondary md:block">
           {props.label}
         </span>
       </div>
