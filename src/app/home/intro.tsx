@@ -38,35 +38,35 @@ export default function IntroSection(): JSX.Element {
   return (
     <section className="relative h-dvh w-full bg-primary">
       <div className="relative z-40 flex h-full items-center px-4 lg:px-24">
-        <div className="flex lg:gap-4 *:flex-1">
+        <div className="flex *:flex-1 lg:gap-4">
           <div className="flex flex-col gap-16">
             <div className="flex flex-col gap-6">
-              <div className="w-fit rounded-full border-2 border-text-secondary px-4 py-2 text-sm font-semibold text-text-secondary lg:px-6 lg:py-3 lg:text-base">
+              <div className="border-invert text-invert w-fit rounded-full border-2 px-4 py-2 text-sm font-semibold lg:px-6 lg:py-3 lg:text-base">
                 Back-end Engineer
               </div>
 
               <span className="text-4xl font-medium text-secondary lg:text-6xl">
                 Hi, I&apos;m{" "}
-                <span className="whitespace-pre font-bold text-text-secondary lg:whitespace-normal">
+                <span className="text-invert whitespace-pre font-bold lg:whitespace-normal">
                   &#x7B;Bryan &mdash;
                 </span>
-                <p className="font-bold text-text-secondary">
+                <p className="text-invert font-bold">
                   Fernando Kurniawan Suhartono&#x7D;
                 </p>
               </span>
 
-              <p className="text-sm text-text-secondary lg:text-base">
+              <p className="text-invert text-sm lg:text-base">
                 An undergraduate student in Computer Science who has a strong
                 passion in programming.
               </p>
 
               <div className="flex gap-6">
                 <SecondaryButton className="flex gap-2" onClick={() => {}}>
-                  <span>Download CV</span>
+                  Download CV
                   <DownloadIcon className="size-6" strokeWidth={0} />
                 </SecondaryButton>
 
-                <button className="flex items-center gap-2 text-text-secondary">
+                <button className="text-invert flex items-center gap-2 hover:brightness-90">
                   <span className="font-semibold">Message me</span>
                   <ArrowIcon className="size-5" strokeWidth={2.5} />
                 </button>
@@ -90,7 +90,7 @@ export default function IntroSection(): JSX.Element {
               priority={true}
               className="h-auto w-96 rounded-xl shadow-md"
             />
-            <span className="flex select-none items-center gap-2 text-lg font-semibold text-text-secondary">
+            <span className="text-invert flex select-none items-center gap-2 text-lg font-semibold">
               Scroll for more
               <ArrowIcon className="size-4 rotate-90" strokeWidth={3} />
             </span>
@@ -98,7 +98,7 @@ export default function IntroSection(): JSX.Element {
         </div>
       </div>
 
-{/*       <div className="absolute -left-[10%] top-[75%] z-10 h-[610px] w-[610px] rounded-full bg-subtle" />
+      {/*       <div className="absolute -left-[10%] top-[75%] z-10 h-[610px] w-[610px] rounded-full bg-subtle" />
       <div className="absolute -left-[15%] -top-[65%] z-10 h-[610px] w-[610px] rounded-full bg-subtle" />
       <div className="absolute left-[64%] top-[70%] z-10 h-[148px] w-[148px] rounded-full bg-subtle" />
       <div className="absolute left-[77%] top-[50%] z-10 h-[610px] w-[610px] rounded-full bg-subtle" /> */}

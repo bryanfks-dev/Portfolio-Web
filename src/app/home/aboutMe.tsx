@@ -11,21 +11,21 @@ export default function AboutMeSection(): JSX.Element {
   return (
     <section
       id="about-me"
-      className="flex flex-col gap-2 bg-background-primary px-4 py-16 md:px-8 lg:px-16 lg:py-24"
+      className="bg-invert flex flex-col gap-2 px-6 py-16 md:px-12 md:py-20 lg:px-24 lg:py-28"
     >
       <span className="text-sm font-bold text-primary lg:text-base">
         &mdash; ABOUT ME
       </span>
 
       <div className="flex flex-col gap-8 *:flex-1 lg:gap-24">
-        <div className="flex flex-col gap-8 *:flex-1 lg:flex-row lg:gap-20">
+        <div className="flex flex-col gap-8 *:flex-1 lg:flex-row lg:gap-48">
           <div className="flex flex-col gap-6">
             <span className="flex items-center gap-2 text-2xl font-bold text-secondary md:text-3xl lg:text-4xl">
-              <UserSolidIcon className="size-6 text-subtle md:size-7 lg:size-8" />
+              <UserSolidIcon className="hidden size-6 text-subtle md:size-7 lg:block lg:size-8" />
               {"Behind the {Code}.."}
             </span>
 
-            <p className="text-justify indent-6 tracking-tighter leading-6">
+            <p className="text-justify leading-relaxed">
               I&lsquo;m{" "}
               <span className="font-semibold text-primary">
                 {"Bryan Fernando Kurniawan Suhartono {Bryan}"}
@@ -36,13 +36,13 @@ export default function AboutMeSection(): JSX.Element {
           </div>
 
           <div className="flex flex-col gap-6">
-            <span className="flex items-center gap-2 text-justify text-2xl font-bold tracking-tighter text-secondary md:text-3xl lg:text-4xl">
+            <span className="flex items-center gap-2 text-justify text-2xl font-bold leading-normal text-secondary md:text-3xl lg:text-4xl">
               {
                 "When Passion Meets {Technology}, Passion in Every Line of {Code} to Take on a New Challenges!"
               }
             </span>
 
-            <p className="text-justify indent-6 tracking-tighter">
+            <p className="text-justify leading-relaxed">
               Over the past 4-year, I’ve been diving into{" "}
               <span className="font-semibold text-primary">
                 {"{web} and {mobile app development}"}
@@ -56,14 +56,14 @@ export default function AboutMeSection(): JSX.Element {
           </div>
         </div>
 
-        <div>
+        <div className="flex flex-col gap-2">
           <span className="font-bold text-secondary">
             Have a chit-chat with me!
           </span>
 
           <Link
-            href={"/#message"}
-            className="flex w-fit items-center gap-2 font-semibold text-primary underline"
+            href={"/#contact"}
+            className="flex w-fit select-none items-center gap-2 font-semibold text-primary underline hover:brightness-75"
           >
             send.hi@bryan.com
             <ArrowIcon className="size-4" strokeWidth={3} />

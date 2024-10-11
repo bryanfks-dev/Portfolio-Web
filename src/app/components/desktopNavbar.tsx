@@ -105,8 +105,8 @@ export default function DesktopNavbar(): JSX.Element {
           "select-none font-semibold",
           isBasePath && selectedMenu === currIndex
             ? scrolled
-              ? "text-primary"
-              : "text-secondary"
+              ? "default"
+              : "invert"
             : scrolled
               ? "text-subtle transition hover:brightness-90"
               : "text-background-primary transition hover:brightness-90",
@@ -124,7 +124,7 @@ export default function DesktopNavbar(): JSX.Element {
    * @returns {JSX.Element} The navbar item seperator.
    */
   const NavItemSeperator = (): JSX.Element => (
-    <li className="select-none font-semibold text-text-primary">/</li>
+    <li className="select-none font-semibold text-default">/</li>
   );
 
   /**
@@ -163,7 +163,7 @@ export default function DesktopNavbar(): JSX.Element {
     <header
       className={clsx(
         "fixed top-0 z-50 w-full",
-        scrolled && "bg-background-primary shadow-sm",
+        scrolled && "bg-invert shadow-sm",
       )}
     >
       <div className={clsx(scrolled ? "px-24 py-2" : "px-12 py-4")}>
@@ -174,13 +174,13 @@ export default function DesktopNavbar(): JSX.Element {
               <span
                 className={clsx(
                   "text-2xl font-bold",
-                  scrolled ? "text-text-primary" : "text-secondary",
+                  scrolled ? "text-default" : "invert",
                 )}
               >
                 bryan
                 <span
                   className={clsx(
-                    scrolled ? "text-primary" : "text-background-primary",
+                    scrolled ? "default" : "text-background-primary",
                   )}
                 >
                   fks.
@@ -213,36 +213,36 @@ export default function DesktopNavbar(): JSX.Element {
                   scrolled
                     ? extraMenuOpenned
                       ? ""
-                      : "text-primary"
+                      : "default"
                     : extraMenuOpenned
-                      ? "text-secondary"
-                      : "text-background-primary group-hover:text-secondary",
+                      ? "invert"
+                      : "text-background-primary group-hover:invert",
                 )}
               />
             </div>
 
             <div
               ref={extraMenuRef}
-              className="absolute top-full mt-5 grid h-0 overflow-y-hidden rounded bg-background-primary shadow-md transition-all duration-300"
+              className="absolute top-full mt-5 grid h-0 overflow-y-hidden rounded bg-invert shadow-md transition-all duration-300"
             >
               <nav className="place-self-center">
                 <ul className="font-medium">
                   <li
-                    className="cursor-pointer bg-background-primary p-4 hover:brightness-90"
+                    className="cursor-pointer bg-invert p-4 hover:brightness-90"
                     onClick={() => {
                       toggleExtraMenu();
                     }}
                   >
                     <span className="flex items-center gap-4">
                       <BrightnessIcon
-                        className="size-6 text-primary"
+                        className="size-6 default"
                         strokeWidth={0.5}
                       />
                       <p className="select-none">Appearance Setup</p>
                     </span>
                   </li>
                   <li
-                    className="cursor-pointer bg-background-primary p-4 hover:brightness-90"
+                    className="cursor-pointer bg-invert p-4 hover:brightness-90"
                     onClick={() => toggleExtraMenu()}
                   >
                     <Link
@@ -250,7 +250,7 @@ export default function DesktopNavbar(): JSX.Element {
                       className="flex items-center gap-4"
                     >
                       <ChatIcon
-                        className="size-6 text-primary"
+                        className="size-6 default"
                         strokeWidth={2}
                       />
                       <p className="select-none">Tell Project Idea</p>

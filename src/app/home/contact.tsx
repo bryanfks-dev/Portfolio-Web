@@ -44,7 +44,7 @@ export default function ContactSection(): JSX.Element {
   return (
     <section
       id="contact"
-      className="flex w-full flex-col gap-10 bg-background-primary px-4 py-16 md:px-8 lg:flex-row lg:px-16 lg:py-24 lg:*:flex-1"
+      className="bg-invert flex w-full flex-col gap-10 px-6 py-16 md:px-12 md:py-20 lg:flex-row lg:px-24 lg:py-28 lg:*:flex-1"
     >
       <div className="flex flex-col gap-6 lg:gap-24">
         <div className="flex flex-col gap-6">
@@ -56,7 +56,7 @@ export default function ContactSection(): JSX.Element {
             <span>{"{Connect}!"}</span>
           </div>
 
-          <span className="text-text-primary">
+          <span className="text-default">
             Have a chit-chat with me about your questions, interests, hobbies,
             or anything!
           </span>
@@ -66,7 +66,7 @@ export default function ContactSection(): JSX.Element {
           Want to see my CV?
           <Link
             href="/"
-            className="flex w-fit gap-2 font-semibold text-primary underline"
+            className="flex w-fit select-none gap-2 font-semibold text-primary underline hover:brightness-75"
           >
             Download Here
             <DownloadIcon className="size-6" strokeWidth={0.2} />

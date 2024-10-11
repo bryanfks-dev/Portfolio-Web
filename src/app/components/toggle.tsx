@@ -7,7 +7,7 @@ export default function Toggle(): JSX.Element {
   return (
     <label
       htmlFor="AcceptConditions"
-      className="relative inline-block h-6 w-10 cursor-pointer rounded-full bg-background-primary transition [-webkit-tap-highlight-color:_transparent] has-[:checked]:bg-primary"
+      className="relative inline-block h-6 w-10 cursor-pointer rounded-full bg-invert transition [-webkit-tap-highlight-color:_transparent] has-[:checked]:bg-primary"
     >
       <input type="checkbox" id="AcceptConditions" className="peer sr-only" />
 

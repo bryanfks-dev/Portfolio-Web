@@ -133,7 +133,7 @@ export default function MobileNavbar(): JSX.Element {
         <span className="sr-only">{props.label}</span>
         <Link
           href={props.href}
-          className={clsx(isSelected ? "text-primary" : "text-highlight")}
+          className={clsx(isSelected ? "default" : "text-highlight")}
         >
           {isSelected ? (
             <props.selectedIcon className="size-6" />
@@ -151,24 +151,24 @@ export default function MobileNavbar(): JSX.Element {
         {/* Extra menu modal */}
         <div
           ref={extraMenuRef}
-          className="absolute bottom-full grid h-0 w-full -translate-y-2 overflow-y-hidden rounded-md bg-text-secondary transition-all duration-300"
+          className="absolute bottom-full grid h-0 w-full -translate-y-2 overflow-y-hidden rounded-md bg-invert transition-all duration-300"
         >
           <nav aria-label="Global" className="w-full place-self-center">
             <ul>
-              <li className="bg-text-secondary px-6 py-3">
+              <li className="bg-invert px-6 py-3">
                 <span className="sr-only">Tell Project Idea</span>
                 <Link href={"/tell-project-idea"} className="flex gap-4">
-                  <ChatIcon className="size-6 text-primary" strokeWidth={1.5} />
+                  <ChatIcon className="size-6 default" strokeWidth={1.5} />
                   <span>Tell project idea</span>
                 </Link>
               </li>
               <li>
                 <hr />
               </li>
-              <li className="flex items-center justify-between bg-text-secondary px-6 py-3">
+              <li className="flex items-center justify-between bg-invert px-6 py-3">
                 <span className="sr-only">Dark Mode</span>
                 <div className="flex gap-4">
-                  <MoonIcon className="size-6 text-primary" strokeWidth={1.5} />
+                  <MoonIcon className="size-6 default" strokeWidth={1.5} />
                   <span>Dark Mode</span>
                 </div>
 
@@ -181,7 +181,7 @@ export default function MobileNavbar(): JSX.Element {
         <div
           className={clsx(
             "py-5",
-            scrolled && "rounded-b-3xl rounded-t-md bg-text-secondary shadow",
+            scrolled && "rounded-b-3xl rounded-t-md bg-invert shadow",
           )}
         >
           <nav aria-label="Global">
@@ -192,7 +192,7 @@ export default function MobileNavbar(): JSX.Element {
               <li onClick={() => toggleExtraMenu()}>
                 <span className="sr-only">Extra Menu</span>
                 {extraMenuOpenned ? (
-                  <Square2x2SolidIcon className="size-6 text-primary" />
+                  <Square2x2SolidIcon className="size-6 default" />
                 ) : (
                   <Square2x2Icon className="size-6 text-highlight" />
                 )}

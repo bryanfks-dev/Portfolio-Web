@@ -15,7 +15,7 @@ export default function SecondaryButton(
   return (
     <button
       className={clsx(
-        "inline-block rounded-lg border border-secondary bg-secondary px-6 py-3 font-medium text-text-secondary hover:bg-transparent hover:text-secondary focus:outline-none focus:ring focus:ring-secondary active:text-secondary",
+        "inline-block rounded-lg border border-secondary bg-secondary px-6 py-3 font-medium text-invert hover:bg-transparent hover:text-secondary focus:outline-none focus:ring focus:ring-secondary active:bg-transparent",
         props.className,
       )}
       onClick={props.onClick}

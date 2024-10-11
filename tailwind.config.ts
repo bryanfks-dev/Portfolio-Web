@@ -19,11 +19,10 @@ const config: Config = {
       light: {
         primary: "#7091E6",
         secondary: "#3D52A0",
-        "background-primary": "#EDE8F5",
         subtle: "#ADBBDA",
         highlight: "#8697C4",
-        "text-primary": "#374151",
-        "text-secondary": "#FFFFFF",
+        default: "#1F2937",
+        invert: "#FFFFFF",
       },
     }),
   ],

@@ -12,7 +12,7 @@ export default function SkillCard(props: SkillProps): JSX.Element {
   return (
     <div
       className={clsx(
-        "flex h-20 w-20 items-center justify-center rounded-2xl md:h-32 md:w-32",
+        "flex h-20 w-20 select-none items-center justify-center rounded-lg md:h-32 md:w-32",
         props.favorite ? "bg-secondary" : "bg-primary",
       )}
     >
@@ -28,7 +28,7 @@ export default function SkillCard(props: SkillProps): JSX.Element {
           alt={props.label}
         />
 
-        <span className="hidden text-sm font-bold text-text-secondary md:block">
+        <span className="text-invert hidden text-sm font-bold md:block">
           {props.label}
         </span>
       </div>

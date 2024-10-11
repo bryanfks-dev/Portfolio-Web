@@ -80,7 +80,7 @@ export default function Tabs(props: TabsProps): JSX.Element {
                   "shrink-0 cursor-pointer select-none border-b-2 px-1 pb-4 font-semibold",
                   selected === index
                     ? "border-primary text-primary"
-                    : "border-transparent text-highlight hover:brightness-90",
+                    : "border-transparent text-highlight hover:brightness-75",
                 )}
                 onClick={() => changeTab(index)}
               >

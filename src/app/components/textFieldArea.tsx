@@ -29,7 +29,7 @@ export default function TextFieldArea(props: TextFieldProps): JSX.Element {
         {props.placeholder}
       </label>
 
-      <div className="overflow-hidden rounded-lg border border-subtle focus-within:border-primary focus-within:ring-1 focus-within:ring-primary">
+      <div className="overflow-hidden rounded-lg border border-subtle placeholder:font-medium focus-within:border-primary focus-within:ring-1 focus-within:ring-primary">
         <textarea
           id={props.htmlFor}
           className="w-full resize-none border-none bg-transparent p-3 align-top focus:ring-0"

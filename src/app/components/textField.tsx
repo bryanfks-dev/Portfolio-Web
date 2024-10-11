@@ -33,12 +33,12 @@ export default function TextField(props: TextFieldProps): JSX.Element {
       <input
         type="text"
         id={props.htmlFor}
-        className="peer border-none bg-transparent p-3 text-text-primary placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0"
+        className="text-default peer border-none bg-transparent p-3 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0"
         placeholder={props.placeholder}
         onChange={onChange}
       />
 
-      <span className="pointer-events-none absolute start-2.5 top-0 -translate-y-1/2 bg-background-primary p-0.5 text-xs text-text-primary transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs">
+      <span className="bg-invert text-default pointer-events-none absolute start-2.5 top-0 -translate-y-1/2 p-0.5 text-xs font-medium transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs">
         {props.placeholder}
       </span>
     </label>

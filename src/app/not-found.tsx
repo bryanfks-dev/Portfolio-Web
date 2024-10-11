@@ -23,17 +23,17 @@ export default function NotFound(): JSX.Element {
   };
 
   return (
-    <main className="flex min-h-dvh w-full select-none items-center justify-center bg-background-primary px-4 py-16 md:px-8 lg:px-16 lg:py-24">
-      <div className="flex w-full flex-col items-center gap-4 lg:flex-row-reverse lg:justify-between ">
+    <main className="bg-invert flex min-h-dvh w-full select-none items-center justify-center px-4 py-16 md:px-8 lg:px-16 lg:py-24">
+      <div className="flex w-full flex-col items-center gap-4 lg:flex-row-reverse lg:justify-between">
         <span className="font-istockWeb text-9xl font-bold text-subtle lg:text-[20rem]">
           404
         </span>
 
-        <div className="flex flex-col items-center justify-center gap-8 lg:items-start lg:w-1/2">
+        <div className="flex flex-col items-center justify-center gap-8 lg:w-1/2 lg:items-start">
           <div className="flex justify-center">
             <span className="text-center text-3xl font-bold text-primary lg:text-left lg:text-7xl">
               Sorry!
-              <span className="text-text-primary">
+              <span className="text-default">
                 <span>, this page isn’t available.</span>
               </span>
             </span>
@@ -41,7 +41,8 @@ export default function NotFound(): JSX.Element {
 
           <div className="flex flex-col items-center gap-20 lg:items-start">
             <p className="text-center text-sm lg:text-left lg:text-lg">
-              The page you were looking for couldn’t be found, please back to homepage.
+              The page you were looking for couldn’t be found, please back to
+              homepage.
             </p>
 
             <PrimaryButton

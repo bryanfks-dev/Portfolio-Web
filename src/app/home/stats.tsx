@@ -35,11 +35,11 @@ export default function StatsSection(): JSX.Element {
   return (
     <section
       id="stats"
-      className="flex flex-col flex-wrap gap-4 bg-primary px-4 py-8 *:flex-1 md:grid md:grid-flow-row md:grid-cols-2 md:gap-8 md:p-8 md:py-16 lg:grid-cols-3 lg:flex-row lg:gap-16 lg:px-16 lg:py-20"
+      className="flex flex-col flex-wrap gap-4 bg-primary px-6 py-16 *:flex-1 md:grid md:grid-flow-row md:grid-cols-2 md:gap-8 md:px-12 md:py-20 lg:grid-cols-3 lg:flex-row lg:gap-16 lg:px-24 lg:py-28"
     >
-      <div className="flex h-96 min-h-72 flex-col justify-end gap-5 rounded-3xl bg-secondary p-8 text-text-secondary md:h-72 md:items-center md:justify-center md:p-2 lg:p-12">
+      <div className="flex h-96 min-h-72 flex-col justify-end gap-5 rounded-3xl bg-secondary p-8 text-invert md:h-72 md:items-center md:justify-center md:p-2 lg:p-12">
         <PuzzlePieceSolidIcon
-          className="size-24 text-secondary brightness-90 md:hidden"
+          className="size-24 invert brightness-90 md:hidden"
           strokeWidth={1.5}
         />
 
@@ -51,9 +51,9 @@ export default function StatsSection(): JSX.Element {
         </span>
       </div>
 
-      <div className="flex h-96 min-h-72 flex-col justify-end gap-5 rounded-3xl bg-secondary p-8 text-text-secondary md:h-72 md:justify-center lg:p-12">
+      <div className="flex h-96 min-h-72 flex-col justify-end gap-5 rounded-3xl bg-secondary p-8 text-invert md:h-72 md:justify-center lg:p-12">
         <BlockCodeSolidIcon
-          className="size-24 text-secondary brightness-90 md:hidden"
+          className="size-24 invert brightness-90 md:hidden"
           strokeWidth={1.5}
         />
 
@@ -63,9 +63,9 @@ export default function StatsSection(): JSX.Element {
         </span>
       </div>
 
-      <div className="flex h-96 min-h-72 flex-col justify-end gap-5 rounded-3xl bg-secondary p-8 text-text-secondary md:col-span-2 md:h-72 md:justify-center lg:col-span-1 lg:p-12">
+      <div className="flex h-96 min-h-72 flex-col justify-end gap-5 rounded-3xl bg-secondary p-8 text-invert md:col-span-2 md:h-72 md:justify-center lg:col-span-1 lg:p-12">
         <HeartSolidIcon
-          className="size-24 text-secondary brightness-90 md:hidden"
+          className="size-24 invert brightness-90 md:hidden"
           strokeWidth={1.5}
         />
 

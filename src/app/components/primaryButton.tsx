@@ -16,7 +16,7 @@ export default function PrimaryButton({
   return (
     <button
       className={clsx(
-        "inline-block rounded-lg border border-primary bg-primary px-6 py-3 font-medium text-text-secondary hover:bg-transparent hover:text-primary focus:outline-none focus:ring active:text-primary",
+        "inline-block rounded-lg border border-primary bg-primary px-6 py-3 font-medium text-invert hover:bg-transparent hover:text-primary focus:outline-none focus:ring active:bg-transparent",
         className,
       )}
       {...props}
