@@ -57,8 +57,8 @@ export default function SkillsSection() {
       </span>
 
       <div className="flex flex-col gap-8 *:flex-1">
-        <span className="flex items-center gap-2 text-2xl font-bold text-secondary md:text-3xl lg:text-4xl">
-          <LightningSolidIcon className="hidden size-6 text-subtle md:size-7 lg:block lg:size-8" />
+        <span className="flex items-center gap-2 text-2xl font-bold text-secondary md:text-3xl">
+          <LightningSolidIcon className="hidden size-6 text-subtle md:size-7 lg:block" />
           {"The {Skills} That Define My Capabilities!"}
         </span>
 

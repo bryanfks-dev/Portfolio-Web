@@ -48,10 +48,10 @@ export default function ContactSection(): JSX.Element {
     >
       <div className="flex flex-col gap-6 lg:gap-24">
         <div className="flex flex-col gap-6">
-          <div className="text- text-5xl font-bold leading-tight text-secondary md:text-6xl lg:text-7xl">
+          <div className="text-5xl font-bold leading-tight text-secondary md:text-6xl">
             <span className="flex items-center gap-2">
               Let’s{" "}
-              <AirplaneSolidIcon className="size-12 text-subtle lg:size-20" />
+              <AirplaneSolidIcon className="size-12 text-subtle md:size-16" />
             </span>
             <span>{"{Connect}!"}</span>
           </div>
@@ -74,12 +74,12 @@ export default function ContactSection(): JSX.Element {
         </span>
       </div>
 
-      <div className="lg:rounded-lg lg:p-8 lg:shadow-md">
-        <span className="hidden text-2xl font-semibold text-primary lg:block">
-          send.hi@bryan.com
+      <div className="lg:rounded-lg lg:p-8 lg:shadow">
+        <span className="hidden text-3xl font-semibold text-primary lg:block">
+          send.hi@bryan.com &mdash;
         </span>
 
-        <form action="/#contact" className="flex flex-col gap-4 lg:mt-8">
+        <form className="flex flex-col gap-4 lg:mt-8">
           <TextField
             placeholder="What's your name?"
             htmlFor="userName"

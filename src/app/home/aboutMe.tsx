@@ -20,12 +20,12 @@ export default function AboutMeSection(): JSX.Element {
       <div className="flex flex-col gap-8 *:flex-1 lg:gap-24">
         <div className="flex flex-col gap-8 *:flex-1 lg:flex-row lg:gap-48">
           <div className="flex flex-col gap-6">
-            <span className="flex items-center gap-2 text-2xl font-bold text-secondary md:text-3xl lg:text-4xl">
-              <UserSolidIcon className="hidden size-6 text-subtle md:size-7 lg:block lg:size-8" />
+            <span className="flex items-center gap-2 text-2xl font-bold text-secondary md:text-3xl">
+              <UserSolidIcon className="hidden size-6 text-subtle md:size-7 lg:block" />
               {"Behind the {Code}.."}
             </span>
 
-            <p className="text-justify leading-relaxed lg:text-lg">
+            <p className="text-justify leading-relaxed">
               I&lsquo;m{" "}
               <span className="font-semibold text-primary">
                 {"Bryan Fernando Kurniawan Suhartono {Bryan}"}
@@ -36,13 +36,13 @@ export default function AboutMeSection(): JSX.Element {
           </div>
 
           <div className="flex flex-col gap-6">
-            <span className="flex items-center gap-2 text-justify text-2xl font-bold leading-normal text-secondary md:text-3xl lg:text-4xl">
+            <span className="flex items-center gap-2 text-justify text-2xl font-bold leading-tight text-secondary md:text-3xl">
               {
                 "When Passion Meets {Technology}, Passion in Every Line of {Code} to Take on a New Challenges!"
               }
             </span>
 
-            <p className="text-justify leading-relaxed lg:text-lg">
+            <p className="text-justify leading-relaxed">
               Over the past 4-year, I’ve been diving into{" "}
               <span className="font-semibold text-primary">
                 {"{web} and {mobile app development}"}
@@ -63,7 +63,7 @@ export default function AboutMeSection(): JSX.Element {
 
           <Link
             href={"/#contact"}
-            className="flex w-fit select-none items-center gap-2 font-semibold text-primary underline hover:brightness-75 lg:text-lg"
+            className="flex w-fit select-none items-center gap-2 font-semibold text-primary underline hover:brightness-75"
           >
             send.hi@bryan.com
             <ArrowIcon className="size-4" strokeWidth={3} />

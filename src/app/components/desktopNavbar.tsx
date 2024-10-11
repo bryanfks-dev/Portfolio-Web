@@ -105,7 +105,7 @@ export default function DesktopNavbar(): JSX.Element {
     <li>
       <Link
         className={clsx(
-          "select-none text-lg font-semibold",
+          "select-none font-semibold",
           isBasePath && selectedMenu === currIndex
             ? scrolled
               ? "text-primary"
@@ -188,7 +188,7 @@ export default function DesktopNavbar(): JSX.Element {
     <header
       ref={navbarRef}
       className={clsx(
-        "fixed top-0 z-50 w-full text-lg transition-all duration-300",
+        "fixed top-0 z-50 w-full transition-all duration-300",
         scrolled && "bg-invert shadow",
       )}
     >
