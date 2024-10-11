@@ -71,13 +71,13 @@ export default function Tabs(props: TabsProps): JSX.Element {
       </div>
 
       <div className="hidden lg:block">
-        <div className="border-b border-subtle">
+        <div>
           <nav className="-mb-px flex gap-6" aria-label="Tabs">
             {props.items.map((item, index) => (
               <span
                 key={index}
                 className={clsx(
-                  "shrink-0 cursor-pointer select-none border-b-2 px-1 pb-4 font-semibold",
+                  "shrink-0 cursor-pointer select-none border-b-[.2rem] px-1 pb-4 font-semibold",
                   selected === index
                     ? "border-primary text-primary"
                     : "border-transparent text-highlight hover:brightness-75",

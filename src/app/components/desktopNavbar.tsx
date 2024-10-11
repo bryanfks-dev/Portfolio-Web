@@ -4,25 +4,21 @@ import clsx from "clsx";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import MenuBarIcon from "../../presentation/icons/menu-bar";
-import HomeIcon from "@/presentation/icons/home";
 import { usePathname } from "next/navigation";
-import UserIcon from "@/presentation/icons/user";
-import LightningIcon from "@/presentation/icons/lightning";
 import React from "react";
 import BrightnessIcon from "@/presentation/icons/brigthness";
 import ChatIcon from "@/presentation/icons/chat";
-import BlockCodeIcon from "@/presentation/icons/blockCode";
-import HomeSolidIcon from "@/presentation/icons/homeSolid";
-import UserSolidIcon from "@/presentation/icons/userSolid";
-import LightningSolidIcon from "@/presentation/icons/lightningSolid";
-import BlockCodeSolidIcon from "@/presentation/icons/blockCodeSolid";
 
 /**
  * DekstopNavbar is a component that renders the navbar for desktop devices.
  *
+ * @param {NavbarProps} props - The props of the component.
+ *
+ * @see {@link NavbarProps}
+ *
  * @returns {JSX.Element} The desktop navbar.
  */
-export default function DesktopNavbar(): JSX.Element {
+export default function DesktopNavbar(props: NavbarProps): JSX.Element {
   // Get current pathname.
   const pathName = usePathname();
 
@@ -52,38 +48,6 @@ export default function DesktopNavbar(): JSX.Element {
    * @setState {boolean} setExtraMenuOpenned - A function that sets the state of the extra menu.
    */
   const [extraMenuOpenned, setExtraMenuOpenned] = useState<boolean>(false);
-
-  /**
-   * navUItems is an array of NavbarItemProps that represents the navbar items.
-   *
-   * @see {@link NavbarItemProps}
-   */
-  const navItems: NavbarItemProps[] = [
-    {
-      label: "Home",
-      unselectedIcon: HomeIcon,
-      selectedIcon: HomeSolidIcon,
-      href: "#",
-    },
-    {
-      label: "About",
-      unselectedIcon: UserIcon,
-      selectedIcon: UserSolidIcon,
-      href: "#about",
-    },
-    {
-      label: "Skills",
-      unselectedIcon: LightningIcon,
-      selectedIcon: LightningSolidIcon,
-      href: "#skills",
-    },
-    {
-      label: "Projects",
-      unselectedIcon: BlockCodeIcon,
-      selectedIcon: BlockCodeSolidIcon,
-      href: "#projects",
-    },
-  ];
 
   // Create a reference for the navbar.
   const navbarRef = useRef<HTMLDivElement>(null);
@@ -221,10 +185,10 @@ export default function DesktopNavbar(): JSX.Element {
           <div className="flex justify-center">
             <nav aria-label="Global">
               <ul className="flex items-center gap-6">
-                {navItems.map((props, index) => (
+                {props.items.map((item, index) => (
                   <React.Fragment key={index}>
                     {index !== 0 && <NavItemSeperator />}
-                    <NavItem currIndex={index} props={props} />
+                    <NavItem currIndex={index} props={item} />
                   </React.Fragment>
                 ))}
               </ul>

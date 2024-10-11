@@ -1,13 +1,5 @@
 "use client";
 
-import BlockCodeSolidIcon from "@/presentation/icons/blockCodeSolid";
-import BlockCodeIcon from "@/presentation/icons/blockCode";
-import HomeIcon from "@/presentation/icons/home";
-import HomeSolidIcon from "@/presentation/icons/homeSolid";
-import LightningIcon from "@/presentation/icons/lightning";
-import LightningSolidIcon from "@/presentation/icons/lightningSolid";
-import UserIcon from "@/presentation/icons/user";
-import UserSolidIcon from "@/presentation/icons/userSolid";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import clsx from "clsx";
@@ -21,41 +13,13 @@ import Toggle from "./toggle";
 /**
  * MobileNavbar is a component that represents the mobile navbar.
  *
+ * @param {NavbarProps} props - The props of the component.
+ *
+ * @see {@link NavbarProps}
+ *
  * @returns {JSX.Element} The mobile navbar.
  */
-export default function MobileNavbar(): JSX.Element {
-  /**
-   * navUItems is an array of NavbarItemProps that represents the navbar items.
-   *
-   * @see {@link NavbarItemProps}
-   */
-  const navItems: NavbarItemProps[] = [
-    {
-      label: "Home",
-      unselectedIcon: HomeIcon,
-      selectedIcon: HomeSolidIcon,
-      href: "#",
-    },
-    {
-      label: "About",
-      unselectedIcon: UserIcon,
-      selectedIcon: UserSolidIcon,
-      href: "#about",
-    },
-    {
-      label: "Skills",
-      unselectedIcon: LightningIcon,
-      selectedIcon: LightningSolidIcon,
-      href: "#skills",
-    },
-    {
-      label: "Projects",
-      unselectedIcon: BlockCodeIcon,
-      selectedIcon: BlockCodeSolidIcon,
-      href: "#projects",
-    },
-  ];
-
+export default function MobileNavbar(props: NavbarProps): JSX.Element {
   // Create a reference for the navbar.
   const navbarRef = useRef<HTMLDivElement>(null);
 
@@ -230,8 +194,8 @@ export default function MobileNavbar(): JSX.Element {
                 scrolled && "px-6",
               )}
             >
-              {navItems.map((props, index) => (
-                <NavItem key={index} currentIndex={index} props={props} />
+              {props.items.map((item, index) => (
+                <NavItem key={index} currentIndex={index} props={item} />
               ))}
               <li
                 onClick={() => toggleExtraMenu()}

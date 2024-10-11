@@ -12,3 +12,14 @@ declare interface NavbarItemProps {
   selectedIcon: React.ElementType;
   href: string;
 }
+
+/**
+ * NavbarProps is a type for the props of the Navbar component.
+ *
+ * @property {NavbarItemProps[]} items - The items of the navbar.
+ *
+ * @see {@link NavbarItemProps}
+ */
+declare interface NavbarProps {
+  items: NavbarItemProps[];
+}

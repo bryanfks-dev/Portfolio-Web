@@ -1,3 +1,5 @@
+"use client";
+
 import ArrowUpCircleSolidIcon from "@/presentation/icons/arrowUpCircleSolid";
 import SocialBubble from "../home/components/socialBubble";
 import GithubIcon from "@/presentation/icons/github";
@@ -33,13 +35,25 @@ export default function Footer(): JSX.Element {
     },
   ];
 
+  /**
+   * scrollToTop is a function that scrolls the window to the top.
+   *
+   * @returns {void}
+   */
+  const scrollToTop = (): void => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="bg-secondary px-6 py-10 md:px-12 md:pt-12 lg:px-24 lg:pt-10">
       <div className="flex flex-col gap-10 lg:gap-8">
         <div className="text-invert flex justify-between">
           <span className="select-none text-2xl font-bold">bryanfks.</span>
 
-          <button className="lg:flex lg:items-center lg:gap-5">
+          <button
+            className="lg:flex lg:items-center lg:gap-5"
+            onClick={scrollToTop}
+          >
             <span className="hidden lg:block lg:text-lg lg:font-medium">
               Back to Top
             </span>
@@ -59,7 +73,7 @@ export default function Footer(): JSX.Element {
       </div>
 
       <div className="text-invert mb-16 mt-10 text-center text-sm lg:mb-6 lg:mt-12 lg:text-base">
-        © 2024, develop by Bryan Fernando Kurniawan Suhartono.
+        © 2024 Bryan Fernando Kurniawan Suhartono
       </div>
     </footer>
   );
