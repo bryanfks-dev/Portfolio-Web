@@ -25,7 +25,7 @@ export default function AboutMeSection(): JSX.Element {
               {"Behind the {Code}.."}
             </span>
 
-            <p className="text-justify leading-relaxed">
+            <p className="text-justify leading-relaxed lg:text-lg">
               I&lsquo;m{" "}
               <span className="font-semibold text-primary">
                 {"Bryan Fernando Kurniawan Suhartono {Bryan}"}
@@ -42,7 +42,7 @@ export default function AboutMeSection(): JSX.Element {
               }
             </span>
 
-            <p className="text-justify leading-relaxed">
+            <p className="text-justify leading-relaxed lg:text-lg">
               Over the past 4-year, I’ve been diving into{" "}
               <span className="font-semibold text-primary">
                 {"{web} and {mobile app development}"}
@@ -63,7 +63,7 @@ export default function AboutMeSection(): JSX.Element {
 
           <Link
             href={"/#contact"}
-            className="flex w-fit select-none items-center gap-2 font-semibold text-primary underline hover:brightness-75"
+            className="flex w-fit select-none items-center gap-2 font-semibold text-primary underline hover:brightness-75 lg:text-lg"
           >
             send.hi@bryan.com
             <ArrowIcon className="size-4" strokeWidth={3} />

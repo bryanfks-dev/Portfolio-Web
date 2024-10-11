@@ -50,7 +50,7 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="bg-invertpx-6 flex flex-col gap-2 overflow-hidden py-16 md:px-12 md:py-20 lg:px-24 lg:py-28"
+      className="bg-invertpx-6 flex flex-col gap-2 overflow-hidden px-6 py-16 md:px-12 md:py-20 lg:px-24 lg:py-28"
     >
       <span className="text-sm font-bold text-primary lg:text-base">
         &mdash; SKILLS
@@ -64,7 +64,7 @@ export default function SkillsSection() {
 
         <Tabs {...skillTabsProps} />
 
-        <div className="flex flex-wrap gap-1 md:justify-start md:gap-6 lg:gap-3.5">
+        <div className="flex flex-wrap gap-1 md:justify-start md:gap-4 lg:gap-3.5">
           {skills[activeSkillsIndex].map((skill, index) => (
             <SkillCard key={index} {...skill} />
           ))}

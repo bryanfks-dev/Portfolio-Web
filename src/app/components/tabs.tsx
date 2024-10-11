@@ -59,7 +59,7 @@ export default function Tabs(props: TabsProps): JSX.Element {
 
         <select
           id="Tab"
-          className="w-full rounded-lg border-2 border-subtle p-3 focus:border-primary"
+          className="w-full rounded-lg border-2 border-subtle bg-transparent p-3 outline-primary focus:border-primary"
           onChange={selectOption}
         >
           {props.items.map((item, index) => (
