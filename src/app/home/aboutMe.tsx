@@ -19,7 +19,7 @@ export default function AboutMeSection(): JSX.Element {
 
       <div className="flex flex-col gap-8 *:flex-1 lg:gap-24">
         <div className="flex flex-col gap-8 *:flex-1 lg:flex-row lg:gap-20">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-6">
             <span className="flex items-center gap-2 text-2xl font-bold text-secondary md:text-3xl lg:text-4xl">
               <UserSolidIcon className="size-6 text-subtle md:size-7 lg:size-8" />
               {"Behind the {Code}.."}
@@ -35,7 +35,7 @@ export default function AboutMeSection(): JSX.Element {
             </p>
           </div>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-6">
             <span className="flex items-center gap-2 text-justify text-2xl font-bold tracking-tighter text-secondary md:text-3xl lg:text-4xl">
               {
                 "When Passion Meets {Technology}, Passion in Every Line of {Code} to Take on a New Challenges!"
