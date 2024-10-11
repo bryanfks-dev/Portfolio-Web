@@ -58,7 +58,7 @@ export default function Footer(): JSX.Element {
         </div>
       </div>
 
-      <div className="text-invert mb-12 mt-10 text-center text-sm lg:mb-6 lg:mt-12 lg:text-base">
+      <div className="text-invert mb-16 mt-10 text-center text-sm lg:mb-6 lg:mt-12 lg:text-base">
         © 2024, develop by Bryan Fernando Kurniawan Suhartono.
       </div>
     </footer>

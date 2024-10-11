@@ -9,7 +9,7 @@ import LightningSolidIcon from "@/presentation/icons/lightningSolid";
 import UserIcon from "@/presentation/icons/user";
 import UserSolidIcon from "@/presentation/icons/userSolid";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import React from "react";
 import Square2x2Icon from "@/presentation/icons/square2x2";
@@ -56,6 +56,9 @@ export default function MobileNavbar(): JSX.Element {
     },
   ];
 
+  // Create a reference for the navbar.
+  const navbarRef = useRef<HTMLDivElement>(null);
+
   // Create a reference for the extra menu.
   const extraMenuRef = useRef<HTMLDivElement>(null);
 
@@ -64,7 +67,7 @@ export default function MobileNavbar(): JSX.Element {
    *
    * @setState {boolean} setScrolled - A function that sets the state of the user scrolling the page.
    */
-  const [scrolled, setScrolled] = useState<boolean>(true);
+  const [scrolled, setScrolled] = useState<boolean>(false);
 
   /**
    * @state {number} selectedMenu - A state that represents the selected menu.
@@ -113,6 +116,28 @@ export default function MobileNavbar(): JSX.Element {
   };
 
   /**
+   * handleScroll is a function that handles the scroll event.
+   *
+   * @returns {void}
+   */
+  const handleScroll = useCallback((): void => {
+    setScrolled((prev) => {
+      if (navbarRef.current === null) {
+        return prev;
+      }
+
+      return scrollY > navbarRef.current.clientHeight;
+    });
+  }, []);
+
+  // Add an event listener to the scroll event.
+  useEffect(() => {
+    addEventListener("scroll", handleScroll);
+
+    return () => removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
+  /**
    * NavItem is a component that renders a navbar item.
    *
    * @param {NavbarItemProps} props - The props of the component.
@@ -133,10 +158,19 @@ export default function MobileNavbar(): JSX.Element {
         <span className="sr-only">{props.label}</span>
         <Link
           href={props.href}
-          className={clsx(isSelected ? "default" : "text-highlight")}
+          className={clsx(
+            "transition-all duration-300",
+            isSelected
+              ? scrolled
+                ? "text-primary"
+                : "text-secondary"
+              : scrolled
+                ? "text-highlight"
+                : "text-invert",
+          )}
         >
           {isSelected ? (
-            <props.selectedIcon className="size-6" />
+            <props.selectedIcon className={"size-6"} />
           ) : (
             <props.unselectedIcon className="size-6" />
           )}
@@ -146,30 +180,32 @@ export default function MobileNavbar(): JSX.Element {
   };
 
   return (
-    <header className="fixed bottom-4 z-50 w-full px-4">
+    <header className="fixed bottom-4 z-50 w-full px-6 md:px-12 lg:px-24">
       <div className="relative">
         {/* Extra menu modal */}
         <div
           ref={extraMenuRef}
-          className="absolute bottom-full grid h-0 w-full -translate-y-2 overflow-y-hidden rounded-md bg-invert transition-all duration-300"
+          className="bg-invert absolute bottom-full grid h-0 w-full -translate-y-2 overflow-y-hidden rounded-md shadow-md transition-all duration-300"
         >
           <nav aria-label="Global" className="w-full place-self-center">
             <ul>
               <li className="bg-invert px-6 py-3">
                 <span className="sr-only">Tell Project Idea</span>
                 <Link href={"/tell-project-idea"} className="flex gap-4">
-                  <ChatIcon className="size-6 default" strokeWidth={1.5} />
-                  <span>Tell project idea</span>
+                  <ChatIcon className="default size-6" strokeWidth={1.5} />
+                  <span className="select-none font-medium">
+                    Tell project idea
+                  </span>
                 </Link>
               </li>
               <li>
                 <hr />
               </li>
-              <li className="flex items-center justify-between bg-invert px-6 py-3">
+              <li className="bg-invert flex items-center justify-between px-6 py-3">
                 <span className="sr-only">Dark Mode</span>
                 <div className="flex gap-4">
-                  <MoonIcon className="size-6 default" strokeWidth={1.5} />
-                  <span>Dark Mode</span>
+                  <MoonIcon className="default size-6" strokeWidth={1.5} />
+                  <span className="select-none font-medium">Dark Mode</span>
                 </div>
 
                 <Toggle />
@@ -179,22 +215,42 @@ export default function MobileNavbar(): JSX.Element {
         </div>
 
         <div
+          ref={navbarRef}
           className={clsx(
-            "py-5",
-            scrolled && "rounded-b-3xl rounded-t-md bg-invert shadow",
+            "transition-all duration-300",
+            scrolled
+              ? "bg-invert rounded-b-3xl rounded-t-md py-5 shadow-md"
+              : "py-2",
           )}
         >
           <nav aria-label="Global">
-            <ul className="flex items-center justify-between px-6">
+            <ul
+              className={clsx(
+                "flex items-center justify-between transition-all duration-300",
+                scrolled && "px-6",
+              )}
+            >
               {navItems.map((props, index) => (
                 <NavItem key={index} currentIndex={index} props={props} />
               ))}
-              <li onClick={() => toggleExtraMenu()}>
+              <li
+                onClick={() => toggleExtraMenu()}
+                className={clsx(
+                  "cursor-pointer transition-all duration-300",
+                  extraMenuOpenned
+                    ? scrolled
+                      ? "text-primary"
+                      : "text-secondary"
+                    : scrolled
+                      ? "text-highlight"
+                      : "text-invert",
+                )}
+              >
                 <span className="sr-only">Extra Menu</span>
                 {extraMenuOpenned ? (
-                  <Square2x2SolidIcon className="size-6 default" />
+                  <Square2x2SolidIcon className="size-6" />
                 ) : (
-                  <Square2x2Icon className="size-6 text-highlight" />
+                  <Square2x2Icon className="size-6" />
                 )}
               </li>
             </ul>

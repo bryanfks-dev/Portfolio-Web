@@ -7,11 +7,11 @@ export default function Toggle(): JSX.Element {
   return (
     <label
       htmlFor="AcceptConditions"
-      className="relative inline-block h-6 w-10 cursor-pointer rounded-full bg-invert transition [-webkit-tap-highlight-color:_transparent] has-[:checked]:bg-primary"
+      className="bg-subtle relative inline-block h-6 w-10 cursor-pointer rounded-full transition [-webkit-tap-highlight-color:_transparent] has-[:checked]:bg-primary"
     >
       <input type="checkbox" id="AcceptConditions" className="peer sr-only" />
 
-      <span className="absolute inset-y-0 start-0 m-1 size-4 rounded-full bg-white transition-all peer-checked:start-4"></span>
+      <span className="bg-invert absolute inset-y-0 start-0 m-1 size-4 rounded-full transition-all peer-checked:start-4" />
     </label>
   );
 }
