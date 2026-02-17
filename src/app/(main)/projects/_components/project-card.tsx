@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { IProject } from '../../../../_/types/project';
+import { IProject } from '@/types/project';
 
 interface IProjectCardProps {
   project: IProject;

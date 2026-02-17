@@ -1,5 +1,4 @@
 import { Badge } from '@/components/base/badges/badges';
-import { ICapabilityTool } from '@/types/capability';
 
 interface IToolBadgeProps {
   tool: ICapabilityTool;
