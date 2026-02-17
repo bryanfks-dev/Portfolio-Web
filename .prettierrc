@@ -1,0 +1,21 @@
+{
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": true,
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ],
+  "tailwindFunctions": ["sortCx", "cx"],
+  "importOrder": [
+    "^react$",
+    "^react-dom$",
+    "^(?!react$|react-dom$|@/|\\.).*",
+    "^@/.*",
+    "^\\.{1,2}/.*"
+  ],
+  "importOrderSeparation": false,
+  "importOrderSortSpecifiers": true,
+  "tailwindStylesheet": "./src/styles/globals.css"
+}
