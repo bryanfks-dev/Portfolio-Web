@@ -30,6 +30,20 @@ export default function HomeSection() {
           >
             {HOME_DATA.user.profesions!.join(' | ')}
           </h6>
+
+          <div className="mt-6 flex w-full gap-4">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="150"
+              className="w-full lg:w-48"
+            >
+              <DownloadCVButton size="lg" />
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="150">
+              <MessageMeButton size="lg" />
+            </div>
+          </div>
         </div>
       </div>
 
@@ -57,7 +71,7 @@ export default function HomeSection() {
         </nav>
       </div>
 
-      <div className="grid w-full grid-cols-3 gap-8 text-primary">
+      <div className="grid w-full grid-cols-3 gap-8 py-8 text-primary">
         {HOME_DATA.records.map((record, index) => (
           <div
             key={record.name}
@@ -74,16 +88,6 @@ export default function HomeSection() {
             </span>
           </div>
         ))}
-      </div>
-
-      <div className="flex gap-4">
-        <div className="flex-1" data-aos="fade-up" data-aos-delay="800">
-          <DownloadCVButton />
-        </div>
-
-        <div data-aos="fade-up" data-aos-delay="900">
-          <MessageMeButton />
-        </div>
       </div>
     </section>
   );

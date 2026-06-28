@@ -27,7 +27,7 @@ export default function IntroductionSection() {
 
         <p data-aos="fade-right" data-aos-delay="150">
           I have a deep interest for building scalable distributed systems,
-          software architecture, and cloud computing.
+          software architecture, software infrastructure, and cloud computing.
         </p>
       </div>
 

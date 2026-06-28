@@ -2,7 +2,13 @@ import { Mail01 } from '@untitledui/icons';
 import { Button } from '@/components/base/buttons/button';
 import { MESSAGE_ME_DATA } from '@/data/message-me';
 
-export default function MessageMeButton() {
+interface IMessageMeButtonProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+}
+
+export default function MessageMeButton({
+  size = 'md',
+}: IMessageMeButtonProps) {
   const getHref = () => {
     const params: string[] = [];
 
@@ -18,6 +24,11 @@ export default function MessageMeButton() {
   };
 
   return (
-    <Button iconLeading={Mail01} size="lg" color="secondary" href={getHref()} />
+    <Button
+      iconLeading={Mail01}
+      size={size}
+      color="secondary"
+      href={getHref()}
+    />
   );
 }

@@ -40,5 +40,38 @@ export const PROJECTS_DATA: IProjectsData = {
         'It sends timely notifications and updates to users about their court-related tasks, helping them stay organized and avoid missed deadlines.',
       ],
     },
+    {
+      name: 'MyHome-AR',
+      releasedYear: 2024,
+      image: {
+        src: '/images/projects/my-home-ar.jpg',
+        alt: 'MyHome-AR App Screenshot',
+      },
+      techStack: ['Unity'],
+      description:
+        "A mobile application that allows users to visualize house properties and furniture in augmented reality. Created using Unity. The app provides a realistic preview of how furniture will look in the user's actual space, allowing them to make informed purchasing decisions.",
+      problems: [
+        "When user visiting a house propery exhibition, a replica of the house is usually displayed, but it doesn't provide a realistic preview of how furniture will look in the user's actual space.",
+        'Many user struggles to visualize hows inside a house property will look with different furniture arrangements, making it difficult to make informed purchasing decisions.',
+        'Vendor often struggle to provide a realistic preview of how inside a house property will look like, making it difficult for users to make informed purchasing decisions.',
+      ],
+      solutions: [
+        "The app allows users to visualize house properties and furniture in augmented reality, providing a realistic preview of how furniture will look in the user's actual space.",
+        'It enables usars to do a virtual walkthrough of the house property, allowing them to explore different furniture arrangements and make informed purchasing decisions.',
+      ],
+    },
+    {
+      name: 'Spectrum-Quiz',
+      releasedYear: 2022,
+      image: {
+        src: '/images/projects/spectrum-quiz.jpg',
+        alt: 'Spectrum-Quiz App Screenshot',
+      },
+      techStack: ['Unity'],
+      description:
+        'A mobile application that helps autism kids to learn human emotions, based on quizez. Created with Unity',
+      problems: ['Spectrum autism kids struggling to express their emotions'],
+      solutions: ['The app allows spectrum autism kids to lean human emotions'],
+    },
   ],
 } as const;

@@ -16,9 +16,12 @@ import { MySQL } from '@/components/icons/mysql';
 import { NextJS } from '@/components/icons/next-js';
 import { Nuxt } from '@/components/icons/nuxt';
 import { PostgreSQL } from '@/components/icons/postgresql';
+import Redis from '@/components/icons/redis';
 import { SocketIO } from '@/components/icons/socket-io';
 import { SpringBoot } from '@/components/icons/spring-boot';
 import { TailwindCSS } from '@/components/icons/tailwindcss';
+import Unity from '@/components/icons/unity';
+import Vite from '@/components/icons/vite';
 import { ICapabilitiesData } from '@/types';
 
 const defineCapabilities = <T extends ICapabilitiesData>(data: T) => data;
@@ -46,6 +49,10 @@ export const CAPABILITIES_DATA = defineCapabilities({
     {
       name: 'Nuxt',
       logo: <Nuxt />,
+    },
+    {
+      name: 'Vite',
+      logo: <Vite />,
     },
     {
       name: 'Flutter',
@@ -115,6 +122,14 @@ export const CAPABILITIES_DATA = defineCapabilities({
     {
       name: 'Google Cloud Platform',
       logo: <GoogleCloudPlatform />,
+    },
+    {
+      name: 'Redis',
+      logo: <Redis />,
+    },
+    {
+      name: 'Unity',
+      logo: <Unity />,
     },
   ],
 } as const);

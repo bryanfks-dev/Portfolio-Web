@@ -21,7 +21,7 @@ export default function ProjectsPage() {
         💻 All My Projects
       </h2>
 
-      <div className="flex flex-col gap-16">
+      <div className="flex flex-col gap-8">
         {PROJECTS_DATA.projects.map((project, index) => (
           <div
             data-aos="fade-up"

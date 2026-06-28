@@ -5,7 +5,7 @@ export const NAVBAR_DATA: INavbarData = {
     href: '/',
     child: (
       <div className="flex items-center gap-2 text-xl font-bold select-none">
-        Portfolio
+        Bryan's Portfolio
       </div>
     ),
   },
