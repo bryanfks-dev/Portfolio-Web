@@ -5,7 +5,7 @@ export const EXPERIENCES_DATA: IExperiencesData = {
     {
       position: 'Full Stack Software Engineer',
       period: {
-        start: new Date('2023-02-03'),
+        start: new Date('2026-02-23'),
       },
       company: {
         name: 'PT. Pharos Indonesia',
