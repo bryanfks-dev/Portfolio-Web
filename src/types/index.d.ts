@@ -28,5 +28,4 @@ interface IExperiencesData {
 export interface IIntroductionData {
   readonly user: IUser;
   readonly location: ILocation;
-  readonly bigFanOfVibeCode: boolean;
 }

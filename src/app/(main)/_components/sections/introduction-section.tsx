@@ -41,17 +41,6 @@ export default function IntroductionSection() {
           {INTRODUCTION_DATA.location.city},{' '}
           {INTRODUCTION_DATA.location.country}
         </span>
-
-        {!INTRODUCTION_DATA.bigFanOfVibeCode && (
-          <span
-            className="flex items-center gap-2 text-sm"
-            data-aos="fade-right"
-            data-aos-delay="250"
-          >
-            <SlashCircle01 size={18} className="text-red-500" />
-            Not a big fan of vibe code
-          </span>
-        )}
       </div>
     </div>
   );
