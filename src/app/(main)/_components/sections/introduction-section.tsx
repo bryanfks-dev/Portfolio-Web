@@ -15,18 +15,15 @@ export default function IntroductionSection() {
             name={INTRODUCTION_DATA.user.name}
             nickname={INTRODUCTION_DATA.user.nickname}
           />
-          . Software Engineer focused on building scalable web applications, distributed systems, and cloud infrastructure.
-          Driven by clean software architecture, modern tooling, and continuous growth.
+          , a Software Engineer focused on building scalable web applications, distributed systems, and cloud infrastructure. I care about clean software architecture, modern tooling, and continuous growth.
         </p>
 
         <p data-aos="fade-right" data-aos-delay="100">
-          I have extensive experience in building web applications and services,
-          using modern technologies. I enjoys learning new things and improving my skills.
+          Over the years, I've built web applications and services using modern technologies, and I genuinely enjoy learning new things and improving my craft.
         </p>
 
         <p data-aos="fade-right" data-aos-delay="150">
-          I have a deep interest for building scalable distributed systems,
-          software architecture, software infrastructure, and cloud computing.
+          My deepest interests are in distributed systems, software architecture, and cloud computing, especially designing systems that scale well and stay maintainable.
         </p>
       </div>
 
