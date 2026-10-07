@@ -16,7 +16,8 @@ export const EXPERIENCES_DATA: IExperiencesData = {
         'Developed and integrated an authentication micro service using FastAPI and Keycloak.',
         'Deployed an API gateway as the initial step in the company’s microservices journey and managing multiple services.',
         'Managing secrets legact secrets by moving them into Haschicorp Vault.',
-        'Rewrite import products program from excel file using the new architecture for scalability and reuseable business logic code.'
+        'Rewrite import products program from excel file using the new architecture for scalability and reuseable business logic code.',
+        'Integrate and create a program to import outlet’s products from external services.'
       ],
     },
     {
