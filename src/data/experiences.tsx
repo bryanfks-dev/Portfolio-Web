@@ -15,7 +15,8 @@ export const EXPERIENCES_DATA: IExperiencesData = {
       done: [
         'Developed and integrated an authentication micro service using FastAPI and Keycloak.',
         'Deployed an API gateway as the initial step in the company’s microservices journey and managing multiple services.',
-        'Worked and moving secrets to Haschicorp Vault for better secret management.'
+        ' Managing secrets by moving secrets to Haschicorp Vault.'
+        ''
       ],
     },
     {

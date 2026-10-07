@@ -15,14 +15,13 @@ export default function IntroductionSection() {
             name={INTRODUCTION_DATA.user.name}
             nickname={INTRODUCTION_DATA.user.nickname}
           />
-          . I am an undergraduate student majoring in Computer Science at Bina
-          Nusantara University.
+          . Software Engineer focused on building scalable web applications, distributed systems, and cloud infrastructure.
+          Driven by clean software architecture, modern tooling, and continuous growth.
         </p>
 
         <p data-aos="fade-right" data-aos-delay="100">
           I have extensive experience in building web applications and services,
-          using modern technologies. I am a self-taught developer who is enjoys
-          learning new things and improving my skills.
+          using modern technologies. I enjoys learning new things and improving my skills.
         </p>
 
         <p data-aos="fade-right" data-aos-delay="150">
