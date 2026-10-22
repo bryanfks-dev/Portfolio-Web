@@ -28,7 +28,7 @@ export default function HomeSection() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            {HOME_DATA.user.profesions!.join(' | ')}
+            {HOME_DATA.user.profesions!.join(' ❘ ')}
           </h6>
 
           <div className="mt-6 flex w-full gap-4">

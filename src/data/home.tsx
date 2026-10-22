@@ -5,11 +5,11 @@ import {
 } from '@/components/foundations/social-icons';
 import { IHomeData } from '@/types';
 
-const START_AS_PROFERSIONAL_YEAR = 2023;
+const START_AS_PROFERSIONAL_YEAR = 2024;
 const YEARS_OF_EXPERIENCES =
   new Date().getFullYear() - START_AS_PROFERSIONAL_YEAR;
 
-const COMPLETED_PROJECTS_COUNT = 3;
+const COMPLETED_PROJECTS_COUNT = 2;
 const HAPPY_CLIENTS_COUNT = 2;
 
 export const HOME_DATA: IHomeData = {
