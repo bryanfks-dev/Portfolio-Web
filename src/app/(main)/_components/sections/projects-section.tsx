@@ -12,7 +12,7 @@ export default function ProjectsSection() {
       </h2>
 
       <div className="flex flex-col gap-16">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {PROJECTS_DATA.projects
             .slice(
               0,
