@@ -3,7 +3,7 @@ import ExperienceCard from '../experience-card';
 
 export default function ExperiencesSection() {
   return (
-    <div id="experiences" className="bg-primary">
+    <div id="experiences">
       <h2 className="mb-6 text-2xl font-bold text-primary" data-aos="fade-up">
         🧭&nbsp;&nbsp;&nbsp;My Journeys
       </h2>

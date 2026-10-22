@@ -7,7 +7,7 @@ import UserNameWithUnderlinedNickname from '../user-name-with-underlined-nicknam
 
 export default function HomeSection() {
   return (
-    <section className="mx-8 my-16 flex flex-col gap-10 bg-primary md:mx-28 md:gap-16 lg:mx-72">
+    <section className="mx-8 my-16 flex flex-col gap-10 md:mx-28 md:gap-16 lg:mx-72">
       <div className="flex flex-col items-center justify-center gap-4 lg:flex-row lg:gap-12">
         <AvatarProfilePhoto
           size="sm"

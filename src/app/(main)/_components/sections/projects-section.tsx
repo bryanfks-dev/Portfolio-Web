@@ -6,7 +6,7 @@ const MAX_PROJECTS_COUNT_TO_SHOW = 4;
 
 export default function ProjectsSection() {
   return (
-    <div id="projects" className="bg-primary">
+    <div id="projects">
       <h2 className="mb-6 text-2xl font-bold" data-aos="fade-up">
         💻&nbsp;&nbsp;&nbsp;My Works
       </h2>

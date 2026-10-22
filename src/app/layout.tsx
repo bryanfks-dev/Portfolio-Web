@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Bryan Fernando — Portfolio',
+  title: "Bryan's Portfolio",
   description: 'Welcome to my portfolio!',
 };
 
@@ -28,7 +28,12 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cx(inter.variable, 'bg-primary antialiased')}>
+      <body
+        className={cx(
+          inter.variable,
+          'bg-linear-to-br from-(--color-bg-primary) to-(--color-bg-secondary) antialiased',
+        )}
+      >
         <Navbar />
 
         <main className="min-h-screen">

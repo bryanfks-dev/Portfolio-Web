@@ -7,7 +7,7 @@ import ToolBadge from '../tool-badge';
 
 export default function CapabilitiesSection() {
   return (
-    <div id="capabilities" className="bg-primary">
+    <div id="capabilities">
       <h2 className="mb-4 text-2xl font-bold" data-aos="fade-up">
         🛠️&nbsp;&nbsp;&nbsp;My Capabilities
       </h2>

@@ -4,7 +4,7 @@ import UserNameWithUnderlinedAndTooltipedNickname from '../user-name-with-underl
 
 export default function IntroductionSection() {
   return (
-    <div id="introduction" className="bg-primary">
+    <div id="introduction">
       <h2 className="mb-4 text-2xl font-bold text-primary" data-aos="fade-up">
         👋 Hey! I am
       </h2>
