@@ -3,6 +3,26 @@ import { IProjectsData } from '@/types';
 export const PROJECTS_DATA: IProjectsData = {
   projects: [
     {
+      name: 'Shunda Flavor Nusantara Profile',
+      releasedYear: 2026,
+      image: {
+        src: '/images/projects/shundafood.png',
+        alt: 'Shunda Flavor Nusantara Profile Web',
+      },
+      description:
+        'A web application that serves as a profile for Shunda Flavor Nusantara, a food business. Created using Next.js and Tailwind CSS. The web application provides information about the business, its products, and services, allowing users to learn more about the brand, its offerings, customized menu, and contact information. It helps establish an online presence for the business and effectively communicate its value proposition to potential customers.',
+      techStack: ['Next.js', 'Tailwind CSS'],
+      problems: [
+        'Many food businesses struggle to establish an online presence and effectively communicate their brand and offerings to potential customers.',
+        'Without a dedicated web application, it can be challenging for businesses to showcase their products and services, leading to missed opportunities for growth and customer engagement.',
+      ],
+      solutions: [
+        'The web application serves as a profile for Shunda Flavor Nusantara, providing information about the business, its products, and services.',
+        "It allows users to learn more about the brand and its offerings, helping to establish an online presence and effectively communicate the business's value proposition to potential customers.",
+      ],
+      accessibleUrl: 'https://shundafood.id',
+    },
+    {
       name: 'Notify',
       releasedYear: 2023,
       image: {
@@ -41,11 +61,11 @@ export const PROJECTS_DATA: IProjectsData = {
       ],
     },
     {
-      name: 'MyHome-AR',
+      name: 'MyHome AR',
       releasedYear: 2024,
       image: {
         src: '/images/projects/my-home-ar.jpg',
-        alt: 'MyHome-AR App Screenshot',
+        alt: 'MyHome -AR App Screenshot',
       },
       techStack: ['Unity'],
       description:
@@ -61,11 +81,11 @@ export const PROJECTS_DATA: IProjectsData = {
       ],
     },
     {
-      name: 'Spectrum-Quiz',
+      name: 'Spectrum Quiz',
       releasedYear: 2022,
       image: {
         src: '/images/projects/spectrum-quiz.jpg',
-        alt: 'Spectrum-Quiz App Screenshot',
+        alt: 'Spectrum Quiz App Screenshot',
       },
       techStack: ['Unity'],
       description:

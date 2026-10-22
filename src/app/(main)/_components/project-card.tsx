@@ -7,10 +7,12 @@ interface IProjectCardProps {
 }
 
 export default function ProjectCard({ project }: IProjectCardProps) {
+  const projectHref = `/projects/${project.name.toLowerCase().replaceAll(' ', '-')}`;
+
   return (
     <Link
       className="group flex flex-col gap-6 rounded-xl p-8 text-primary transition duration-100 hover:bg-primary_hover"
-      href={`/projects/${project.name}`}
+      href={projectHref}
     >
       <Image
         src={project.image.src}

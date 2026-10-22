@@ -14,4 +14,5 @@ interface IProject {
   readonly url?: string;
   readonly problems: string[];
   readonly solutions: string[];
+  readonly accessibleUrl?: string;
 }

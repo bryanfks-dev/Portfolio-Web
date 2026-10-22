@@ -8,7 +8,7 @@ export default function ProjectsSection() {
   return (
     <div id="projects" className="bg-primary">
       <h2 className="mb-6 text-2xl font-bold" data-aos="fade-up">
-        💻 My Works
+        💻&nbsp;&nbsp;&nbsp;My Works
       </h2>
 
       <div className="flex flex-col gap-16">

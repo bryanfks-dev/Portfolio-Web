@@ -18,7 +18,12 @@ interface IProjectsData {
 }
 
 interface ICapabilitiesData {
-  readonly tools: ICapabilityTool[];
+  readonly programmingLanguages: ICapabilityTool[];
+  readonly frontendAndMobileFrameworks: ICapabilityTool[];
+  readonly backendFrameworks: ICapabilityTool[];
+  readonly cloudAndDevOps: ICapabilityTool[];
+  readonly databases: ICapabilityTool[];
+  readonly others: ICapabilityTool[];
 }
 
 interface IExperiencesData {

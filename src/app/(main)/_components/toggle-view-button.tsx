@@ -13,6 +13,7 @@ export default function ToggleViewButton() {
 
   return (
     <ButtonGroup
+      size='lg'
       selectedKeys={context?.selectedMenu}
       onSelectionChange={context?.setSingleSelectedMenu}
     >

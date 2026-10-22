@@ -3,13 +3,32 @@ import { IExperiencesData } from '@/types';
 export const EXPERIENCES_DATA: IExperiencesData = {
   experiences: [
     {
+      position: 'Software Engineer (Freelance)',
+      period: {
+        start: new Date('2026-09-02'),
+        end: new Date('2026-12-02'),
+      },
+      company: {
+        name: 'PT. Shunda Flavor Nusantara',
+        logoSrc: '/images/companies/shunda-logo.png',
+        website: 'https://shundafood.id',
+      },
+      done: [
+        'Developed a B2B company profile website to showcase services and attract business clients.',
+        'Implemented SEO best practices to improve website visibility and search engine rankings.',
+        'Implemented Content Management System (CMS) to allow easy content updates and management for the website.',
+        'Teamed up with stakeholders IT team to set up the website on a cloud server and configure domain and SSL certificate.',
+        'Collaborated with the design team to ensure the website design aligns with the company brand and user experience.',
+      ],
+    },
+    {
       position: 'Software Engineer',
       period: {
         start: new Date('2026-02-28'),
       },
       company: {
         name: 'PT. Pharos Indonesia',
-        logoSrc: '/images/pharos-logo.svg',
+        logoSrc: '/images/companies/pharos-logo.svg',
         website: 'https://www.pharos.co.id',
       },
       done: [
@@ -24,14 +43,14 @@ export const EXPERIENCES_DATA: IExperiencesData = {
       ],
     },
     {
-      position: 'Software Engineer Intern',
+      position: 'Software Engineer (Intern)',
       period: {
         start: new Date('2025-02-03'),
         end: new Date('2026-02-03'),
       },
       company: {
         name: 'PT. Pharos Indonesia',
-        logoSrc: '/images/pharos-logo.svg',
+        logoSrc: '/images/companies/pharos-logo.svg',
         website: 'https://www.pharos.co.id',
       },
       done: [

@@ -1,11 +1,15 @@
-import { CAPABILITIES_DATA } from '@/data/capabilities';
+import {
+  CAPABILITIES_DATA,
+  CAPABILITIES_KEY_LABELS,
+} from '@/data/capabilities';
+import { ICapabilitiesData } from '@/types';
 import ToolBadge from '../tool-badge';
 
 export default function CapabilitiesSection() {
   return (
     <div id="capabilities" className="bg-primary">
       <h2 className="mb-4 text-2xl font-bold" data-aos="fade-up">
-        🛠️ My Capabilities
+        🛠️&nbsp;&nbsp;&nbsp;My Capabilities
       </h2>
 
       <div className="space-y-4">
@@ -29,14 +33,27 @@ export default function CapabilitiesSection() {
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-2 text-primary sm:gap-4">
-          {CAPABILITIES_DATA.tools.map((tool, index) => (
-            <div
-              key={tool.name}
-              data-aos="zoom-in"
-              data-aos-delay={50 * (index + 2)}
-            >
-              <ToolBadge tool={tool} />
+        <div className="flex flex-col gap-6 sm:gap-8">
+          {Object.entries(CAPABILITIES_DATA).map(([category, tools], index) => (
+            <div key={category} className="flex flex-col gap-2 sm:gap-4">
+              <span
+                className="font-semibold text-primary"
+                data-aos="fade-up"
+                data-aos-delay={index * 50}
+              >
+                {CAPABILITIES_KEY_LABELS[category as keyof ICapabilitiesData]}
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {tools.map((tool: ICapabilityTool) => (
+                  <div
+                    key={tool.name}
+                    data-aos="zoom-in"
+                    data-aos-delay={index * 100}
+                  >
+                    <ToolBadge tool={tool} />
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>

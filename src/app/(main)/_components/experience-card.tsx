@@ -23,36 +23,39 @@ export default function ExperienceCard({ experience }: IExperienceCardProps) {
         className="h-auto w-14"
         loading="lazy"
         data-aos="fade-up"
+        unoptimized
       />
 
       <div className="flex flex-col gap-2">
-        <div data-aos="fade-up">
-          <h5 className="text-lg font-bold">{experience.position}</h5>
-          <span className="text-base">
-            @
-            {experience.company.website ? (
-              <Link
-                href={experience.company.website}
-                className="decoration-brand-500 hover:text-brand-500 hover:underline"
-              >
-                {experience.company.name}
-              </Link>
-            ) : (
-              <>{experience.company.name}</>
-            )}
-          </span>
-        </div>
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-2">
+          <div data-aos="fade-up">
+            <h5 className="text-lg font-bold">{experience.position}</h5>
+            <span className="text-base">
+              @&nbsp;
+              {experience.company.website ? (
+                <Link
+                  href={experience.company.website}
+                  className="decoration-brand-500 hover:text-brand-500 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {experience.company.name}
+                </Link>
+              ) : (
+                <>{experience.company.name}</>
+              )}
+            </span>
+          </div>
 
-        <div data-aos="fade-up">
-          <Badge className="flex gap-2">
-            {!exceedCurrentDate && <Hourglass03 className="size-3.5" />}
+          <Badge data-aos="fade-up" className='flex flex-row items-center gap-2'>
+              {!exceedCurrentDate && <Hourglass03 className="size-3.5" />}
 
-            <div>
-              {formatToDisplayDate(experience.period.start)} -{' '}
-              {experience.period.end !== undefined
-                ? formatToDisplayDate(experience.period.end)
-                : 'Present'}
-            </div>
+              <div>
+                {formatToDisplayDate(experience.period.start)} -{' '}
+                {experience.period.end !== undefined
+                  ? formatToDisplayDate(experience.period.end)
+                  : 'Present'}
+              </div>
           </Badge>
         </div>
 

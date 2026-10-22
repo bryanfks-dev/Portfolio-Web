@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { PROJECTS_DATA } from '@/data/projects';
 import BackButton from './_components/back-button';
@@ -18,7 +19,7 @@ export default function ProjectDetailPage() {
   const { name } = useParams<{ name: string }>();
 
   const project = PROJECTS_DATA.projects.find(
-    (project) => project.name.toLowerCase() === name.toLowerCase(),
+    (project) => project.name.toLowerCase().replaceAll(' ', '-') === name,
   );
   if (project === undefined) {
     return <div>Project not found</div>;
@@ -108,7 +109,7 @@ export default function ProjectDetailPage() {
           data-aos="fade-up"
           data-aos-delay={400 + (project.problems.length + 1) * 50}
         >
-          ✨ My Solution
+          ✨&nbsp;&nbsp;&nbsp;My Solution
         </h2>
 
         <ol className="flex list-decimal flex-col gap-4 text-tertiary">
@@ -137,11 +138,34 @@ export default function ProjectDetailPage() {
         }
       />
 
+      {project.accessibleUrl && (
+        <div
+          className="mx-auto"
+          data-aos="fade-up"
+          data-aos-delay={
+            550 +
+            (project.problems.length + 1) * 50 +
+            (project.solutions.length + 1) * 50
+          }
+        >
+          You can also visit the project by clicking{' '}
+          <Link
+            href={project.accessibleUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-brand-500 underline"
+          >
+            this
+          </Link>
+          .
+        </div>
+      )}
+
       <div
-        className="mx-auto"
+        className="mx-auto mt-8"
         data-aos="fade-up"
         data-aos-delay={
-          550 +
+          600 +
           (project.problems.length + 1) * 50 +
           (project.solutions.length + 1) * 50
         }

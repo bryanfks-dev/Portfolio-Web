@@ -18,7 +18,7 @@ export default function ProjectsPage() {
         data-aos="fade-up"
         data-aos-delya="50"
       >
-        💻 All My Projects
+        💻&nbsp;&nbsp;&nbsp;All My Projects
       </h2>
 
       <div className="flex flex-col gap-8">

@@ -13,7 +13,7 @@ export default function HomeSection() {
           size="sm"
           src={HOME_DATA.avatar.src}
           alt={HOME_DATA.avatar.alt}
-          className="mt-1 size-28 ring-4 ring-brand md:size-32 lg:size-38"
+          className="mt-1 size-32 ring-4 ring-brand md:size-40 lg:size-46"
         />
 
         <div className="space-y-1 text-center text-primary lg:text-left">
@@ -60,7 +60,7 @@ export default function HomeSection() {
                 href={social.href}
                 target="_blank"
                 rel="noopener"
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 hover:underline"
                 aria-label={social.name}
               >
                 {social.icon}
