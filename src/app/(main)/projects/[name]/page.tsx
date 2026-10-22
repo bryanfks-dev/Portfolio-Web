@@ -55,7 +55,7 @@ export default function ProjectDetailPage() {
       </div>
       <div className="flex flex-col gap-4">
         <p
-          className="text-justify text-tertiary"
+          className="text-tertiary"
           data-aos="fade-up"
           data-aos-delay="150"
         >
