@@ -11,7 +11,7 @@ export default function ProjectCard({ project }: IProjectCardProps) {
 
   return (
     <Link
-      className="group flex flex-col gap-6 rounded-xl p-8 text-primary transition duration-100 hover:bg-primary_hover"
+      className="group flex flex-col gap-6 rounded-xl p-0 md:p-8 text-primary transition duration-100 hover:bg-primary_hover"
       href={projectHref}
     >
       <Image
