@@ -9,5 +9,4 @@ export const INTRODUCTION_DATA: IIntroductionData = {
     city: 'Jakarta',
     country: 'Indonesia',
   },
-  bigFanOfVibeCode: false,
 } as const;
